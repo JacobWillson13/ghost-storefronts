@@ -1,0 +1,4513 @@
+{
+  "protocol": "No hyperparameter search. Fit archive 2015-2017 / calibrate 2018 / test 2019; fit live Jan-Sep 2024 / calibrate Oct-Dec 2024 / test 2025. Base estimators are not refit on calibration rows. Default LGBM; logistic max_iter=1000 for convergence.",
+  "bootstrap": "500 paired business_id cluster resamples; frozen models; percentile 95% intervals.",
+  "models": [
+    {
+      "era": "archive",
+      "ranker": "staleness_rule",
+      "training_warnings": [],
+      "visits": 65916,
+      "oob": 9448,
+      "violations": 16340,
+      "base_rate": 0.14333394016627224,
+      "roc_auc": 0.7760658746005396,
+      "average_precision": 0.4365821959866421,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3296,
+          "oob": 2143,
+          "precision": 0.6501820388349514,
+          "recall": 0.22682049110922947,
+          "violations": 227,
+          "rest_visits": 62620,
+          "rest_oob": 7305,
+          "rest_violations": 16113,
+          "violation_rate": 0.06887135922330097,
+          "rest_violation_rate": 0.2573139572021718,
+          "scenario_net_violations_per_1000": 188.44259797887085
+        },
+        {
+          "budget": 0.1,
+          "selected": 6592,
+          "oob": 3596,
+          "precision": 0.5455097087378641,
+          "recall": 0.38060965283657916,
+          "violations": 585,
+          "rest_visits": 59324,
+          "rest_oob": 5852,
+          "rest_violations": 15755,
+          "violation_rate": 0.08874393203883495,
+          "rest_violation_rate": 0.265575483783966,
+          "scenario_net_violations_per_1000": 176.83155174513104
+        },
+        {
+          "budget": 0.2,
+          "selected": 13184,
+          "oob": 5494,
+          "precision": 0.41671723300970875,
+          "recall": 0.5814987298899238,
+          "violations": 1947,
+          "rest_visits": 52732,
+          "rest_oob": 3954,
+          "rest_violations": 14393,
+          "violation_rate": 0.14767900485436894,
+          "rest_violation_rate": 0.27294621861488283,
+          "scenario_net_violations_per_1000": 125.2672137605139
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3596,
+        "fp": 2996,
+        "fn": 5852,
+        "tn": 53472
+      },
+      "average_precision_ci95": [
+        0.4242863697491471,
+        0.44733177215384107
+      ],
+      "p10_ci95": [
+        0.5323369124433713,
+        0.55867182678329
+      ],
+      "delta_ap_rule_ci95": [
+        0.0,
+        0.0
+      ],
+      "delta_p10_rule_ci95": [
+        0.0,
+        0.0
+      ],
+      "delta_ap_rule": 0.0,
+      "delta_p10_rule": 0.0,
+      "brier_calibrated": 0.09945873302960262,
+      "brier_uncalibrated": null,
+      "calibration": [
+        {
+          "bin": "(0.0576, 0.0614]",
+          "visits": 15948,
+          "oob": 1074,
+          "mean_probability": 0.059363255781722676,
+          "observed_share": 0.0673438675696012
+        },
+        {
+          "bin": "(0.0614, 0.0651]",
+          "visits": 3858,
+          "oob": 69,
+          "mean_probability": 0.0629907492363501,
+          "observed_share": 0.017884914463452566
+        },
+        {
+          "bin": "(0.0651, 0.0741]",
+          "visits": 6578,
+          "oob": 177,
+          "mean_probability": 0.06959780789343781,
+          "observed_share": 0.026907874733961692
+        },
+        {
+          "bin": "(0.0741, 0.0851]",
+          "visits": 6580,
+          "oob": 334,
+          "mean_probability": 0.0794438229614126,
+          "observed_share": 0.05075987841945289
+        },
+        {
+          "bin": "(0.0851, 0.1]",
+          "visits": 6587,
+          "oob": 468,
+          "mean_probability": 0.09251212778177152,
+          "observed_share": 0.07104903597996053
+        },
+        {
+          "bin": "(0.1, 0.127]",
+          "visits": 6590,
+          "oob": 718,
+          "mean_probability": 0.11054571409211661,
+          "observed_share": 0.10895295902883156
+        },
+        {
+          "bin": "(0.127, 0.173]",
+          "visits": 6592,
+          "oob": 1114,
+          "mean_probability": 0.15226241399350857,
+          "observed_share": 0.16899271844660194
+        },
+        {
+          "bin": "(0.173, 0.335]",
+          "visits": 6591,
+          "oob": 1898,
+          "mean_probability": 0.23424409603135166,
+          "observed_share": 0.2879684418145957
+        },
+        {
+          "bin": "(0.335, 0.962]",
+          "visits": 6592,
+          "oob": 3596,
+          "mean_probability": 0.536485495882077,
+          "observed_share": 0.5455097087378641
+        }
+      ],
+      "calibration_uncalibrated": [],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "UNKNOWN",
+            "top_visits": 13184,
+            "top_oob": 5494,
+            "top_violations": 1947,
+            "rest_visits": 52732,
+            "rest_oob": 3954,
+            "rest_violations": 14393
+          }
+        ],
+        "comparable_top_visits": 13184,
+        "scenario_same_program_net_per_1000": 125.26721376051387
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "logistic_history",
+      "training_warnings": [],
+      "visits": 65916,
+      "oob": 9448,
+      "violations": 16340,
+      "base_rate": 0.14333394016627224,
+      "roc_auc": 0.8338852827228261,
+      "average_precision": 0.5581844432371318,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3296,
+          "oob": 2449,
+          "precision": 0.7430218446601942,
+          "recall": 0.2592082980524979,
+          "violations": 185,
+          "rest_visits": 62620,
+          "rest_oob": 6999,
+          "rest_violations": 16155,
+          "violation_rate": 0.05612864077669903,
+          "rest_violation_rate": 0.2579846694346854,
+          "scenario_net_violations_per_1000": 201.85602865798634
+        },
+        {
+          "budget": 0.1,
+          "selected": 6592,
+          "oob": 4181,
+          "precision": 0.634253640776699,
+          "recall": 0.44252751905165116,
+          "violations": 496,
+          "rest_visits": 59324,
+          "rest_oob": 5267,
+          "rest_violations": 15844,
+          "violation_rate": 0.07524271844660194,
+          "rest_violation_rate": 0.2670757197761446,
+          "scenario_net_violations_per_1000": 191.83300132954264
+        },
+        {
+          "budget": 0.2,
+          "selected": 13184,
+          "oob": 6160,
+          "precision": 0.4672330097087379,
+          "recall": 0.6519898391193903,
+          "violations": 1735,
+          "rest_visits": 52732,
+          "rest_oob": 3288,
+          "rest_violations": 14605,
+          "violation_rate": 0.1315989077669903,
+          "rest_violation_rate": 0.27696654782674657,
+          "scenario_net_violations_per_1000": 145.36764005975627
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4181,
+        "fp": 2411,
+        "fn": 5267,
+        "tn": 54057
+      },
+      "average_precision_ci95": [
+        0.54603219257418,
+        0.5701078296591225
+      ],
+      "p10_ci95": [
+        0.6200938501449718,
+        0.6474314635837256
+      ],
+      "delta_ap_rule_ci95": [
+        0.11329331079525219,
+        0.12978468448583352
+      ],
+      "delta_p10_rule_ci95": [
+        0.07898990312821831,
+        0.0975584835712725
+      ],
+      "delta_ap_rule": 0.12160224725048968,
+      "delta_p10_rule": 0.0887439320388349,
+      "brier_calibrated": 0.08846190931606439,
+      "brier_uncalibrated": 0.08870398347682469,
+      "calibration": [
+        {
+          "bin": "(-0.00075, 0.0371]",
+          "visits": 6592,
+          "oob": 121,
+          "mean_probability": 0.025337620225495173,
+          "observed_share": 0.018355582524271843
+        },
+        {
+          "bin": "(0.0371, 0.0495]",
+          "visits": 6592,
+          "oob": 188,
+          "mean_probability": 0.043560670523050744,
+          "observed_share": 0.028519417475728157
+        },
+        {
+          "bin": "(0.0495, 0.061]",
+          "visits": 6592,
+          "oob": 251,
+          "mean_probability": 0.05513803485718289,
+          "observed_share": 0.03807645631067961
+        },
+        {
+          "bin": "(0.061, 0.068]",
+          "visits": 6665,
+          "oob": 354,
+          "mean_probability": 0.06539451123310168,
+          "observed_share": 0.0531132783195799
+        },
+        {
+          "bin": "(0.068, 0.0741]",
+          "visits": 6518,
+          "oob": 424,
+          "mean_probability": 0.07211465452715583,
+          "observed_share": 0.06505062902730899
+        },
+        {
+          "bin": "(0.0741, 0.0813]",
+          "visits": 6684,
+          "oob": 499,
+          "mean_probability": 0.07763311823051894,
+          "observed_share": 0.07465589467384799
+        },
+        {
+          "bin": "(0.0813, 0.106]",
+          "visits": 6498,
+          "oob": 524,
+          "mean_probability": 0.09237652616813778,
+          "observed_share": 0.08064019698368728
+        },
+        {
+          "bin": "(0.106, 0.156]",
+          "visits": 6592,
+          "oob": 927,
+          "mean_probability": 0.12788617980594222,
+          "observed_share": 0.140625
+        },
+        {
+          "bin": "(0.156, 0.354]",
+          "visits": 6591,
+          "oob": 1979,
+          "mean_probability": 0.23690603583813197,
+          "observed_share": 0.30025792747686236
+        },
+        {
+          "bin": "(0.354, 0.998]",
+          "visits": 6592,
+          "oob": 4181,
+          "mean_probability": 0.6785369919638176,
+          "observed_share": 0.634253640776699
+        }
+      ],
+      "calibration_uncalibrated": [
+        {
+          "bin": "(-0.00082, 0.0317]",
+          "visits": 6592,
+          "oob": 121,
+          "mean_probability": 0.021406755781107727,
+          "observed_share": 0.018355582524271843
+        },
+        {
+          "bin": "(0.0317, 0.0428]",
+          "visits": 6592,
+          "oob": 188,
+          "mean_probability": 0.03746748866806508,
+          "observed_share": 0.028519417475728157
+        },
+        {
+          "bin": "(0.0428, 0.0532]",
+          "visits": 6592,
+          "oob": 251,
+          "mean_probability": 0.04787655583388348,
+          "observed_share": 0.03807645631067961
+        },
+        {
+          "bin": "(0.0532, 0.0596]",
+          "visits": 6665,
+          "oob": 354,
+          "mean_probability": 0.05718398854812605,
+          "observed_share": 0.0531132783195799
+        },
+        {
+          "bin": "(0.0596, 0.0652]",
+          "visits": 6518,
+          "oob": 424,
+          "mean_probability": 0.06332324313820747,
+          "observed_share": 0.06505062902730899
+        },
+        {
+          "bin": "(0.0652, 0.0718]",
+          "visits": 6684,
+          "oob": 499,
+          "mean_probability": 0.06838745727082206,
+          "observed_share": 0.07465589467384799
+        },
+        {
+          "bin": "(0.0718, 0.0947]",
+          "visits": 6498,
+          "oob": 524,
+          "mean_probability": 0.08201514167552076,
+          "observed_share": 0.08064019698368728
+        },
+        {
+          "bin": "(0.0947, 0.142]",
+          "visits": 6592,
+          "oob": 927,
+          "mean_probability": 0.11529831163256543,
+          "observed_share": 0.140625
+        },
+        {
+          "bin": "(0.142, 0.337]",
+          "visits": 6591,
+          "oob": 1979,
+          "mean_probability": 0.22093714189363403,
+          "observed_share": 0.30025792747686236
+        },
+        {
+          "bin": "(0.337, 0.999]",
+          "visits": 6592,
+          "oob": 4181,
+          "mean_probability": 0.6718726653090522,
+          "observed_share": 0.634253640776699
+        }
+      ],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "UNKNOWN",
+            "top_visits": 13184,
+            "top_oob": 6160,
+            "top_violations": 1735,
+            "rest_visits": 52732,
+            "rest_oob": 3288,
+            "rest_violations": 14605
+          }
+        ],
+        "comparable_top_visits": 13184,
+        "scenario_same_program_net_per_1000": 145.36764005975627
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "lightgbm_history",
+      "training_warnings": [],
+      "visits": 65916,
+      "oob": 9448,
+      "violations": 16340,
+      "base_rate": 0.14333394016627224,
+      "roc_auc": 0.8163995713487208,
+      "average_precision": 0.48935180301496023,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3296,
+          "oob": 2347,
+          "precision": 0.7120752427184466,
+          "recall": 0.24841236240474174,
+          "violations": 259,
+          "rest_visits": 62620,
+          "rest_oob": 7101,
+          "rest_violations": 16081,
+          "violation_rate": 0.07858009708737865,
+          "rest_violation_rate": 0.25680293835835194,
+          "scenario_net_violations_per_1000": 178.2228412709733
+        },
+        {
+          "budget": 0.1,
+          "selected": 6592,
+          "oob": 3549,
+          "precision": 0.538379854368932,
+          "recall": 0.3756350550381033,
+          "violations": 732,
+          "rest_visits": 59324,
+          "rest_oob": 5899,
+          "rest_violations": 15608,
+          "violation_rate": 0.11104368932038836,
+          "rest_violation_rate": 0.26309756590924416,
+          "scenario_net_violations_per_1000": 152.05387658885581
+        },
+        {
+          "budget": 0.2,
+          "selected": 13184,
+          "oob": 5176,
+          "precision": 0.3925970873786408,
+          "recall": 0.5478408128704487,
+          "violations": 2162,
+          "rest_visits": 52732,
+          "rest_oob": 4272,
+          "rest_violations": 14178,
+          "violation_rate": 0.1639866504854369,
+          "rest_violation_rate": 0.2688689979519078,
+          "scenario_net_violations_per_1000": 104.88234746647088
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3549,
+        "fp": 3043,
+        "fn": 5899,
+        "tn": 53425
+      },
+      "average_precision_ci95": [
+        0.477697330798545,
+        0.5013162846227848
+      ],
+      "p10_ci95": [
+        0.5239177987901037,
+        0.5538045953492284
+      ],
+      "delta_ap_rule_ci95": [
+        0.039908998034827455,
+        0.06664968686636524
+      ],
+      "delta_p10_rule_ci95": [
+        -0.021038754481567896,
+        0.0085100800195061
+      ],
+      "delta_ap_rule": 0.05276960702831812,
+      "delta_p10_rule": -0.007129854368932098,
+      "brier_calibrated": 0.09569119015556986,
+      "brier_uncalibrated": 0.09670355612817054,
+      "calibration": [
+        {
+          "bin": "(-0.000535, 0.0165]",
+          "visits": 6592,
+          "oob": 59,
+          "mean_probability": 0.007930393959880452,
+          "observed_share": 0.008950242718446601
+        },
+        {
+          "bin": "(0.0165, 0.0412]",
+          "visits": 6592,
+          "oob": 148,
+          "mean_probability": 0.029902290400191482,
+          "observed_share": 0.022451456310679612
+        },
+        {
+          "bin": "(0.0412, 0.0652]",
+          "visits": 6591,
+          "oob": 242,
+          "mean_probability": 0.05288497389005245,
+          "observed_share": 0.03671673494158701
+        },
+        {
+          "bin": "(0.0652, 0.0844]",
+          "visits": 6736,
+          "oob": 371,
+          "mean_probability": 0.07726308820747556,
+          "observed_share": 0.05507719714964371
+        },
+        {
+          "bin": "(0.0844, 0.0891]",
+          "visits": 6933,
+          "oob": 464,
+          "mean_probability": 0.08684151185926356,
+          "observed_share": 0.06692629453339102
+        },
+        {
+          "bin": "(0.0891, 0.114]",
+          "visits": 6106,
+          "oob": 468,
+          "mean_probability": 0.10047568389847544,
+          "observed_share": 0.07664592204389126
+        },
+        {
+          "bin": "(0.114, 0.163]",
+          "visits": 6591,
+          "oob": 966,
+          "mean_probability": 0.13797942512584843,
+          "observed_share": 0.14656349567592172
+        },
+        {
+          "bin": "(0.163, 0.222]",
+          "visits": 6593,
+          "oob": 1554,
+          "mean_probability": 0.19001583669475577,
+          "observed_share": 0.23570453511299863
+        },
+        {
+          "bin": "(0.222, 0.348]",
+          "visits": 6592,
+          "oob": 1627,
+          "mean_probability": 0.27992967155213017,
+          "observed_share": 0.24681432038834952
+        },
+        {
+          "bin": "(0.348, 0.985]",
+          "visits": 6590,
+          "oob": 3549,
+          "mean_probability": 0.5702658332781373,
+          "observed_share": 0.5385432473444614
+        }
+      ],
+      "calibration_uncalibrated": [
+        {
+          "bin": "(-0.000624, 0.0123]",
+          "visits": 6592,
+          "oob": 59,
+          "mean_probability": 0.005969941755170099,
+          "observed_share": 0.008950242718446601
+        },
+        {
+          "bin": "(0.0123, 0.0301]",
+          "visits": 6592,
+          "oob": 148,
+          "mean_probability": 0.02196512099896734,
+          "observed_share": 0.022451456310679612
+        },
+        {
+          "bin": "(0.0301, 0.0475]",
+          "visits": 6591,
+          "oob": 242,
+          "mean_probability": 0.038562369293912116,
+          "observed_share": 0.03671673494158701
+        },
+        {
+          "bin": "(0.0475, 0.0614]",
+          "visits": 6736,
+          "oob": 371,
+          "mean_probability": 0.05620670037053314,
+          "observed_share": 0.05507719714964371
+        },
+        {
+          "bin": "(0.0614, 0.0648]",
+          "visits": 6933,
+          "oob": 464,
+          "mean_probability": 0.06316565059876592,
+          "observed_share": 0.06692629453339102
+        },
+        {
+          "bin": "(0.0648, 0.0831]",
+          "visits": 6106,
+          "oob": 468,
+          "mean_probability": 0.07311912340909434,
+          "observed_share": 0.07664592204389126
+        },
+        {
+          "bin": "(0.0831, 0.119]",
+          "visits": 6591,
+          "oob": 966,
+          "mean_probability": 0.10079120247897035,
+          "observed_share": 0.14656349567592172
+        },
+        {
+          "bin": "(0.119, 0.164]",
+          "visits": 6593,
+          "oob": 1554,
+          "mean_probability": 0.13998340864275619,
+          "observed_share": 0.23570453511299863
+        },
+        {
+          "bin": "(0.164, 0.266]",
+          "visits": 6592,
+          "oob": 1627,
+          "mean_probability": 0.21064306497199192,
+          "observed_share": 0.24681432038834952
+        },
+        {
+          "bin": "(0.266, 0.975]",
+          "visits": 6590,
+          "oob": 3549,
+          "mean_probability": 0.4875909372273631,
+          "observed_share": 0.5385432473444614
+        }
+      ],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "UNKNOWN",
+            "top_visits": 13184,
+            "top_oob": 5176,
+            "top_violations": 2162,
+            "rest_visits": 52732,
+            "rest_oob": 4272,
+            "rest_violations": 14178
+          }
+        ],
+        "comparable_top_visits": 13184,
+        "scenario_same_program_net_per_1000": 104.88234746647085
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "staleness_rule",
+      "training_warnings": [],
+      "visits": 88745,
+      "oob": 15423,
+      "violations": 17720,
+      "base_rate": 0.17379007268015098,
+      "roc_auc": 0.7355056983811451,
+      "average_precision": 0.4297156405813522,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4438,
+          "oob": 2699,
+          "precision": 0.6081568273997296,
+          "recall": 0.1749983790442845,
+          "violations": 202,
+          "rest_visits": 84307,
+          "rest_oob": 12724,
+          "rest_violations": 17518,
+          "violation_rate": 0.04551599819738621,
+          "rest_violation_rate": 0.20778820264035014,
+          "scenario_net_violations_per_1000": 162.27220444296393
+        },
+        {
+          "budget": 0.1,
+          "selected": 8875,
+          "oob": 4855,
+          "precision": 0.5470422535211268,
+          "recall": 0.31478959994812944,
+          "violations": 578,
+          "rest_visits": 79870,
+          "rest_oob": 10568,
+          "rest_violations": 17142,
+          "violation_rate": 0.06512676056338028,
+          "rest_violation_rate": 0.2146237636158758,
+          "scenario_net_violations_per_1000": 149.49700305249553
+        },
+        {
+          "budget": 0.2,
+          "selected": 17749,
+          "oob": 7697,
+          "precision": 0.43365823426671923,
+          "recall": 0.4990598456850159,
+          "violations": 1734,
+          "rest_visits": 70996,
+          "rest_oob": 7726,
+          "rest_violations": 15986,
+          "violation_rate": 0.09769564482506057,
+          "rest_violation_rate": 0.22516761507690575,
+          "scenario_net_violations_per_1000": 127.47197025184518
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4855,
+        "fp": 4020,
+        "fn": 10568,
+        "tn": 69302
+      },
+      "average_precision_ci95": [
+        0.4180960339835573,
+        0.4407367116233171
+      ],
+      "p10_ci95": [
+        0.5344071628212856,
+        0.5594116238741813
+      ],
+      "delta_ap_rule_ci95": [
+        0.0,
+        0.0
+      ],
+      "delta_p10_rule_ci95": [
+        0.0,
+        0.0
+      ],
+      "delta_ap_rule": 0.0,
+      "delta_p10_rule": 0.0,
+      "brier_calibrated": 0.12231951893492873,
+      "brier_uncalibrated": null,
+      "calibration": [
+        {
+          "bin": "(0.0908, 0.0952]",
+          "visits": 17827,
+          "oob": 1920,
+          "mean_probability": 0.09224177308345702,
+          "observed_share": 0.10770180063947944
+        },
+        {
+          "bin": "(0.0952, 0.1]",
+          "visits": 8877,
+          "oob": 251,
+          "mean_probability": 0.09761487151442295,
+          "observed_share": 0.028275318238143516
+        },
+        {
+          "bin": "(0.1, 0.105]",
+          "visits": 8846,
+          "oob": 433,
+          "mean_probability": 0.10266953273838668,
+          "observed_share": 0.04894867736830206
+        },
+        {
+          "bin": "(0.105, 0.113]",
+          "visits": 8854,
+          "oob": 725,
+          "mean_probability": 0.10878219582241878,
+          "observed_share": 0.0818838942850689
+        },
+        {
+          "bin": "(0.113, 0.123]",
+          "visits": 8871,
+          "oob": 1125,
+          "mean_probability": 0.11789008600821464,
+          "observed_share": 0.12681772066283395
+        },
+        {
+          "bin": "(0.123, 0.141]",
+          "visits": 8872,
+          "oob": 1555,
+          "mean_probability": 0.1302687623198077,
+          "observed_share": 0.17527051397655546
+        },
+        {
+          "bin": "(0.141, 0.199]",
+          "visits": 8849,
+          "oob": 1717,
+          "mean_probability": 0.16420638965615134,
+          "observed_share": 0.19403322409311788
+        },
+        {
+          "bin": "(0.199, 0.43]",
+          "visits": 8880,
+          "oob": 2846,
+          "mean_probability": 0.3104306372030904,
+          "observed_share": 0.3204954954954955
+        },
+        {
+          "bin": "(0.43, 0.938]",
+          "visits": 8869,
+          "oob": 4851,
+          "mean_probability": 0.5781615227863344,
+          "observed_share": 0.5469613259668509
+        }
+      ],
+      "calibration_uncalibrated": [],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "Business Education",
+            "top_visits": 129,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 4396,
+            "rest_oob": 40,
+            "rest_violations": 0
+          },
+          {
+            "program": "Business Info Check",
+            "top_visits": 1,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 7,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "Check UNL - FTR",
+            "top_visits": 220,
+            "top_oob": 150,
+            "top_violations": 13,
+            "rest_visits": 900,
+            "rest_oob": 405,
+            "rest_violations": 182
+          },
+          {
+            "program": "Consumer Request to Inspect",
+            "top_visits": 191,
+            "top_oob": 43,
+            "top_violations": 70,
+            "rest_visits": 1990,
+            "rest_oob": 330,
+            "rest_violations": 920
+          },
+          {
+            "program": "External to DCA - Community Board",
+            "top_visits": 4,
+            "top_oob": 0,
+            "top_violations": 3,
+            "rest_visits": 11,
+            "rest_oob": 5,
+            "rest_violations": 4
+          },
+          {
+            "program": "External to DCA - External Agencies",
+            "top_visits": 4,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 65,
+            "rest_oob": 12,
+            "rest_violations": 34
+          },
+          {
+            "program": "External to DCA - Public Official",
+            "top_visits": 2,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 19,
+            "rest_oob": 2,
+            "rest_violations": 6
+          },
+          {
+            "program": "Legal Case-Related",
+            "top_visits": 12,
+            "top_oob": 2,
+            "top_violations": 4,
+            "rest_visits": 485,
+            "rest_oob": 152,
+            "rest_violations": 171
+          },
+          {
+            "program": "License Revoked",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 125,
+            "rest_oob": 5,
+            "rest_violations": 55
+          },
+          {
+            "program": "License Suspended",
+            "top_visits": 2,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 248,
+            "rest_oob": 40,
+            "rest_violations": 104
+          },
+          {
+            "program": "Mediation",
+            "top_visits": 19,
+            "top_oob": 8,
+            "top_violations": 2,
+            "rest_visits": 88,
+            "rest_oob": 23,
+            "rest_violations": 22
+          },
+          {
+            "program": "Patrol",
+            "top_visits": 15074,
+            "top_oob": 6902,
+            "top_violations": 1539,
+            "rest_visits": 18371,
+            "rest_oob": 2196,
+            "rest_violations": 6196
+          },
+          {
+            "program": "Price Gouging",
+            "top_visits": 4,
+            "top_oob": 4,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 1
+          },
+          {
+            "program": "Qualifying - Site",
+            "top_visits": 7,
+            "top_oob": 0,
+            "top_violations": 1,
+            "rest_visits": 94,
+            "rest_oob": 0,
+            "rest_violations": 21
+          },
+          {
+            "program": "Scale",
+            "top_visits": 910,
+            "top_oob": 109,
+            "top_violations": 26,
+            "rest_visits": 5397,
+            "rest_oob": 156,
+            "rest_violations": 164
+          },
+          {
+            "program": "Scale - Condemned Follow-up",
+            "top_visits": 5,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 161,
+            "rest_oob": 5,
+            "rest_violations": 15
+          },
+          {
+            "program": "Sealing Order",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 118,
+            "rest_oob": 2,
+            "rest_violations": 111
+          },
+          {
+            "program": "Sealing Order Follow-up",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 643,
+            "rest_oob": 4,
+            "rest_violations": 0
+          },
+          {
+            "program": "Sweep",
+            "top_visits": 161,
+            "top_oob": 51,
+            "top_violations": 17,
+            "rest_visits": 761,
+            "rest_oob": 186,
+            "rest_violations": 160
+          },
+          {
+            "program": "Tobacco - Adult Inspection",
+            "top_visits": 450,
+            "top_oob": 149,
+            "top_violations": 29,
+            "rest_visits": 13218,
+            "rest_oob": 1627,
+            "rest_violations": 2172
+          },
+          {
+            "program": "Tobacco - Sale to Minor",
+            "top_visits": 133,
+            "top_oob": 46,
+            "top_violations": 5,
+            "rest_visits": 7920,
+            "rest_oob": 1179,
+            "rest_violations": 1526
+          },
+          {
+            "program": "Tobacco - State Suspension",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 32,
+            "rest_oob": 1,
+            "rest_violations": 6
+          },
+          {
+            "program": "Tobacco - T21",
+            "top_visits": 408,
+            "top_oob": 229,
+            "top_violations": 25,
+            "rest_visits": 13569,
+            "rest_oob": 1324,
+            "rest_violations": 3895
+          },
+          {
+            "program": "WAM - Condemned Follow-up",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "WAM - Other",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 108,
+            "rest_oob": 3,
+            "rest_violations": 2
+          },
+          {
+            "program": "WAM - Petroleum",
+            "top_visits": 13,
+            "top_oob": 2,
+            "top_violations": 0,
+            "rest_visits": 2264,
+            "rest_oob": 29,
+            "rest_violations": 219
+          }
+        ],
+        "comparable_top_visits": 17749,
+        "scenario_same_program_net_per_1000": 212.9482038064865
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "logistic_history",
+      "training_warnings": [],
+      "visits": 88745,
+      "oob": 15423,
+      "violations": 17720,
+      "base_rate": 0.17379007268015098,
+      "roc_auc": 0.7826709224250803,
+      "average_precision": 0.4656447641728303,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4438,
+          "oob": 2829,
+          "precision": 0.6374493014871564,
+          "recall": 0.18342734876483174,
+          "violations": 213,
+          "rest_visits": 84307,
+          "rest_oob": 12594,
+          "rest_violations": 17507,
+          "violation_rate": 0.047994592158630014,
+          "rest_violation_rate": 0.20765772711637231,
+          "scenario_net_violations_per_1000": 159.6631349577423
+        },
+        {
+          "budget": 0.1,
+          "selected": 8875,
+          "oob": 5063,
+          "precision": 0.5704788732394366,
+          "recall": 0.32827595150100497,
+          "violations": 585,
+          "rest_visits": 79870,
+          "rest_oob": 10360,
+          "rest_violations": 17135,
+          "violation_rate": 0.06591549295774649,
+          "rest_violation_rate": 0.21453612119694504,
+          "scenario_net_violations_per_1000": 148.62062823919857
+        },
+        {
+          "budget": 0.2,
+          "selected": 17749,
+          "oob": 8092,
+          "precision": 0.455913009183616,
+          "recall": 0.5246709459897556,
+          "violations": 1711,
+          "rest_visits": 70996,
+          "rest_oob": 7331,
+          "rest_violations": 16009,
+          "violation_rate": 0.09639979717167164,
+          "rest_violation_rate": 0.22549157699025296,
+          "scenario_net_violations_per_1000": 129.09177981858133
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5063,
+        "fp": 3812,
+        "fn": 10360,
+        "tn": 69510
+      },
+      "average_precision_ci95": [
+        0.45374031785413366,
+        0.4758623592447128
+      ],
+      "p10_ci95": [
+        0.5562769660952138,
+        0.5824043778953695
+      ],
+      "delta_ap_rule_ci95": [
+        0.030328882801201808,
+        0.04100615525677855
+      ],
+      "delta_p10_rule_ci95": [
+        0.014718162538190648,
+        0.031007914670671478
+      ],
+      "delta_ap_rule": 0.035929123591478096,
+      "delta_p10_rule": 0.023436619718309792,
+      "brier_calibrated": 0.1180588487651283,
+      "brier_uncalibrated": 0.11878172803501232,
+      "calibration": [
+        {
+          "bin": "(-0.0009876, 0.0461]",
+          "visits": 8875,
+          "oob": 197,
+          "mean_probability": 0.03249387469056643,
+          "observed_share": 0.02219718309859155
+        },
+        {
+          "bin": "(0.0461, 0.0668]",
+          "visits": 8875,
+          "oob": 298,
+          "mean_probability": 0.05645334412871929,
+          "observed_share": 0.03357746478873239
+        },
+        {
+          "bin": "(0.0668, 0.084]",
+          "visits": 9285,
+          "oob": 597,
+          "mean_probability": 0.07672797274716038,
+          "observed_share": 0.064297253634895
+        },
+        {
+          "bin": "(0.084, 0.0951]",
+          "visits": 8463,
+          "oob": 838,
+          "mean_probability": 0.08976594717133818,
+          "observed_share": 0.09901926030958288
+        },
+        {
+          "bin": "(0.0951, 0.105]",
+          "visits": 9678,
+          "oob": 1061,
+          "mean_probability": 0.10136860974190644,
+          "observed_share": 0.10963008886133499
+        },
+        {
+          "bin": "(0.105, 0.114]",
+          "visits": 8549,
+          "oob": 1121,
+          "mean_probability": 0.11161709664841979,
+          "observed_share": 0.1311264475377237
+        },
+        {
+          "bin": "(0.114, 0.135]",
+          "visits": 8398,
+          "oob": 1450,
+          "mean_probability": 0.12295381266652775,
+          "observed_share": 0.17266015718028102
+        },
+        {
+          "bin": "(0.135, 0.195]",
+          "visits": 8892,
+          "oob": 1771,
+          "mean_probability": 0.1592635711931768,
+          "observed_share": 0.19916779127305442
+        },
+        {
+          "bin": "(0.195, 0.427]",
+          "visits": 8855,
+          "oob": 3027,
+          "mean_probability": 0.3137355170187928,
+          "observed_share": 0.34184076792772444
+        },
+        {
+          "bin": "(0.427, 0.984]",
+          "visits": 8875,
+          "oob": 5063,
+          "mean_probability": 0.5870707922755218,
+          "observed_share": 0.5704788732394366
+        }
+      ],
+      "calibration_uncalibrated": [
+        {
+          "bin": "(-0.00099751, 0.0378]",
+          "visits": 8875,
+          "oob": 197,
+          "mean_probability": 0.025349281804805415,
+          "observed_share": 0.02219718309859155
+        },
+        {
+          "bin": "(0.0378, 0.0586]",
+          "visits": 8875,
+          "oob": 298,
+          "mean_probability": 0.04810842895686028,
+          "observed_share": 0.03357746478873239
+        },
+        {
+          "bin": "(0.0586, 0.0767]",
+          "visits": 9285,
+          "oob": 597,
+          "mean_probability": 0.06903852440793443,
+          "observed_share": 0.064297253634895
+        },
+        {
+          "bin": "(0.0767, 0.0889]",
+          "visits": 8463,
+          "oob": 838,
+          "mean_probability": 0.08302868934819443,
+          "observed_share": 0.09901926030958288
+        },
+        {
+          "bin": "(0.0889, 0.0998]",
+          "visits": 9678,
+          "oob": 1061,
+          "mean_probability": 0.09579946389815995,
+          "observed_share": 0.10963008886133499
+        },
+        {
+          "bin": "(0.0998, 0.11]",
+          "visits": 8549,
+          "oob": 1121,
+          "mean_probability": 0.10728237603816201,
+          "observed_share": 0.1311264475377237
+        },
+        {
+          "bin": "(0.11, 0.134]",
+          "visits": 8398,
+          "oob": 1450,
+          "mean_probability": 0.1201991094079735,
+          "observed_share": 0.17266015718028102
+        },
+        {
+          "bin": "(0.134, 0.206]",
+          "visits": 8892,
+          "oob": 1771,
+          "mean_probability": 0.16275126111731936,
+          "observed_share": 0.19916779127305442
+        },
+        {
+          "bin": "(0.206, 0.491]",
+          "visits": 8855,
+          "oob": 3027,
+          "mean_probability": 0.35200315207877697,
+          "observed_share": 0.34184076792772444
+        },
+        {
+          "bin": "(0.491, 0.994]",
+          "visits": 8875,
+          "oob": 5063,
+          "mean_probability": 0.6623714165186781,
+          "observed_share": 0.5704788732394366
+        }
+      ],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "Business Education",
+            "top_visits": 173,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 4352,
+            "rest_oob": 37,
+            "rest_violations": 0
+          },
+          {
+            "program": "Business Info Check",
+            "top_visits": 2,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 6,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "Check UNL - FTR",
+            "top_visits": 214,
+            "top_oob": 163,
+            "top_violations": 12,
+            "rest_visits": 906,
+            "rest_oob": 392,
+            "rest_violations": 183
+          },
+          {
+            "program": "Consumer Request to Inspect",
+            "top_visits": 199,
+            "top_oob": 47,
+            "top_violations": 70,
+            "rest_visits": 1982,
+            "rest_oob": 326,
+            "rest_violations": 920
+          },
+          {
+            "program": "External to DCA - Community Board",
+            "top_visits": 4,
+            "top_oob": 0,
+            "top_violations": 3,
+            "rest_visits": 11,
+            "rest_oob": 5,
+            "rest_violations": 4
+          },
+          {
+            "program": "External to DCA - External Agencies",
+            "top_visits": 6,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 63,
+            "rest_oob": 10,
+            "rest_violations": 34
+          },
+          {
+            "program": "External to DCA - Public Official",
+            "top_visits": 3,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 18,
+            "rest_oob": 1,
+            "rest_violations": 6
+          },
+          {
+            "program": "Legal Case-Related",
+            "top_visits": 15,
+            "top_oob": 5,
+            "top_violations": 4,
+            "rest_visits": 482,
+            "rest_oob": 149,
+            "rest_violations": 171
+          },
+          {
+            "program": "License Revoked",
+            "top_visits": 2,
+            "top_oob": 1,
+            "top_violations": 1,
+            "rest_visits": 123,
+            "rest_oob": 4,
+            "rest_violations": 54
+          },
+          {
+            "program": "License Suspended",
+            "top_visits": 22,
+            "top_oob": 15,
+            "top_violations": 1,
+            "rest_visits": 228,
+            "rest_oob": 26,
+            "rest_violations": 103
+          },
+          {
+            "program": "Mediation",
+            "top_visits": 19,
+            "top_oob": 8,
+            "top_violations": 2,
+            "rest_visits": 88,
+            "rest_oob": 23,
+            "rest_violations": 22
+          },
+          {
+            "program": "Patrol",
+            "top_visits": 14273,
+            "top_oob": 6850,
+            "top_violations": 1414,
+            "rest_visits": 19172,
+            "rest_oob": 2248,
+            "rest_violations": 6321
+          },
+          {
+            "program": "Price Gouging",
+            "top_visits": 4,
+            "top_oob": 4,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 1
+          },
+          {
+            "program": "Qualifying - Site",
+            "top_visits": 8,
+            "top_oob": 0,
+            "top_violations": 1,
+            "rest_visits": 93,
+            "rest_oob": 0,
+            "rest_violations": 21
+          },
+          {
+            "program": "Scale",
+            "top_visits": 822,
+            "top_oob": 104,
+            "top_violations": 21,
+            "rest_visits": 5485,
+            "rest_oob": 161,
+            "rest_violations": 169
+          },
+          {
+            "program": "Scale - Condemned Follow-up",
+            "top_visits": 6,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 160,
+            "rest_oob": 4,
+            "rest_violations": 15
+          },
+          {
+            "program": "Sealing Order",
+            "top_visits": 1,
+            "top_oob": 0,
+            "top_violations": 1,
+            "rest_visits": 117,
+            "rest_oob": 2,
+            "rest_violations": 110
+          },
+          {
+            "program": "Sealing Order Follow-up",
+            "top_visits": 111,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 532,
+            "rest_oob": 3,
+            "rest_violations": 0
+          },
+          {
+            "program": "Sweep",
+            "top_visits": 170,
+            "top_oob": 55,
+            "top_violations": 17,
+            "rest_visits": 752,
+            "rest_oob": 182,
+            "rest_violations": 160
+          },
+          {
+            "program": "Tobacco - Adult Inspection",
+            "top_visits": 533,
+            "top_oob": 234,
+            "top_violations": 47,
+            "rest_visits": 13135,
+            "rest_oob": 1542,
+            "rest_violations": 2154
+          },
+          {
+            "program": "Tobacco - Sale to Minor",
+            "top_visits": 243,
+            "top_oob": 108,
+            "top_violations": 10,
+            "rest_visits": 7810,
+            "rest_oob": 1117,
+            "rest_violations": 1521
+          },
+          {
+            "program": "Tobacco - State Suspension",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 32,
+            "rest_oob": 1,
+            "rest_violations": 6
+          },
+          {
+            "program": "Tobacco - T21",
+            "top_visits": 906,
+            "top_oob": 485,
+            "top_violations": 107,
+            "rest_visits": 13071,
+            "rest_oob": 1068,
+            "rest_violations": 3813
+          },
+          {
+            "program": "WAM - Condemned Follow-up",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "WAM - Other",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 108,
+            "rest_oob": 3,
+            "rest_violations": 2
+          },
+          {
+            "program": "WAM - Petroleum",
+            "top_visits": 13,
+            "top_oob": 4,
+            "top_violations": 0,
+            "rest_visits": 2264,
+            "rest_oob": 27,
+            "rest_violations": 219
+          }
+        ],
+        "comparable_top_visits": 17749,
+        "scenario_same_program_net_per_1000": 204.14672678422735
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_history",
+      "training_warnings": [],
+      "visits": 88745,
+      "oob": 15423,
+      "violations": 17720,
+      "base_rate": 0.17379007268015098,
+      "roc_auc": 0.7912550972957832,
+      "average_precision": 0.4723174123476442,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4438,
+          "oob": 2812,
+          "precision": 0.6336187471834159,
+          "recall": 0.18232509887829865,
+          "violations": 229,
+          "rest_visits": 84307,
+          "rest_oob": 12611,
+          "rest_violations": 17491,
+          "violation_rate": 0.051599819738621,
+          "rest_violation_rate": 0.2074679445360409,
+          "scenario_net_violations_per_1000": 155.8681247974199
+        },
+        {
+          "budget": 0.1,
+          "selected": 8875,
+          "oob": 5115,
+          "precision": 0.5763380281690141,
+          "recall": 0.33164753938922387,
+          "violations": 584,
+          "rest_visits": 79870,
+          "rest_oob": 10308,
+          "rest_violations": 17136,
+          "violation_rate": 0.06580281690140845,
+          "rest_violation_rate": 0.21454864154250658,
+          "scenario_net_violations_per_1000": 148.74582464109815
+        },
+        {
+          "budget": 0.2,
+          "selected": 17749,
+          "oob": 8168,
+          "precision": 0.4601949405600316,
+          "recall": 0.5295986513648447,
+          "violations": 1774,
+          "rest_visits": 70996,
+          "rest_oob": 7255,
+          "rest_violations": 15946,
+          "violation_rate": 0.09994929291791087,
+          "rest_violation_rate": 0.22460420305369316,
+          "scenario_net_violations_per_1000": 124.6549101357823
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5115,
+        "fp": 3760,
+        "fn": 10308,
+        "tn": 69562
+      },
+      "average_precision_ci95": [
+        0.4601758966520149,
+        0.48412793994320735
+      ],
+      "p10_ci95": [
+        0.5623862182292017,
+        0.5879843985787336
+      ],
+      "delta_ap_rule_ci95": [
+        0.033504852689729595,
+        0.0509329591087912
+      ],
+      "delta_p10_rule_ci95": [
+        0.020168135715382073,
+        0.03691635902785022
+      ],
+      "delta_ap_rule": 0.042601771766291985,
+      "delta_p10_rule": 0.02929577464788735,
+      "brier_calibrated": 0.11631036282039856,
+      "brier_uncalibrated": 0.11690039123582945,
+      "calibration": [
+        {
+          "bin": "(0.0026, 0.0324]",
+          "visits": 8876,
+          "oob": 128,
+          "mean_probability": 0.021741001526690878,
+          "observed_share": 0.014420910319963948
+        },
+        {
+          "bin": "(0.0324, 0.0535]",
+          "visits": 8873,
+          "oob": 315,
+          "mean_probability": 0.04300428005633319,
+          "observed_share": 0.035500957962357714
+        },
+        {
+          "bin": "(0.0535, 0.0784]",
+          "visits": 8876,
+          "oob": 496,
+          "mean_probability": 0.06553746697164874,
+          "observed_share": 0.0558810274898603
+        },
+        {
+          "bin": "(0.0784, 0.104]",
+          "visits": 8873,
+          "oob": 843,
+          "mean_probability": 0.0917039528695157,
+          "observed_share": 0.09500732559450017
+        },
+        {
+          "bin": "(0.104, 0.132]",
+          "visits": 12632,
+          "oob": 1500,
+          "mean_probability": 0.12261920667468347,
+          "observed_share": 0.11874604179860672
+        },
+        {
+          "bin": "(0.132, 0.14]",
+          "visits": 6178,
+          "oob": 674,
+          "mean_probability": 0.13586922328918727,
+          "observed_share": 0.10909679507931369
+        },
+        {
+          "bin": "(0.14, 0.18]",
+          "visits": 7813,
+          "oob": 1268,
+          "mean_probability": 0.15868487735049278,
+          "observed_share": 0.16229361320875463
+        },
+        {
+          "bin": "(0.18, 0.264]",
+          "visits": 8875,
+          "oob": 2031,
+          "mean_probability": 0.21313282319598603,
+          "observed_share": 0.2288450704225352
+        },
+        {
+          "bin": "(0.264, 0.474]",
+          "visits": 8875,
+          "oob": 3053,
+          "mean_probability": 0.36895150989150366,
+          "observed_share": 0.344
+        },
+        {
+          "bin": "(0.474, 0.945]",
+          "visits": 8874,
+          "oob": 5115,
+          "mean_probability": 0.594186317566751,
+          "observed_share": 0.5764029749830967
+        }
+      ],
+      "calibration_uncalibrated": [
+        {
+          "bin": "(0.00041, 0.0193]",
+          "visits": 8876,
+          "oob": 128,
+          "mean_probability": 0.012098448974143522,
+          "observed_share": 0.014420910319963948
+        },
+        {
+          "bin": "(0.0193, 0.0352]",
+          "visits": 8873,
+          "oob": 315,
+          "mean_probability": 0.027140045003194602,
+          "observed_share": 0.035500957962357714
+        },
+        {
+          "bin": "(0.0352, 0.0559]",
+          "visits": 8876,
+          "oob": 496,
+          "mean_probability": 0.04507689488504278,
+          "observed_share": 0.0558810274898603
+        },
+        {
+          "bin": "(0.0559, 0.0791]",
+          "visits": 8873,
+          "oob": 843,
+          "mean_probability": 0.06768785165351293,
+          "observed_share": 0.09500732559450017
+        },
+        {
+          "bin": "(0.0791, 0.105]",
+          "visits": 12632,
+          "oob": 1500,
+          "mean_probability": 0.09639375556237814,
+          "observed_share": 0.11874604179860672
+        },
+        {
+          "bin": "(0.105, 0.113]",
+          "visits": 6178,
+          "oob": 674,
+          "mean_probability": 0.10917410010491325,
+          "observed_share": 0.10909679507931369
+        },
+        {
+          "bin": "(0.113, 0.154]",
+          "visits": 7813,
+          "oob": 1268,
+          "mean_probability": 0.13203600083574366,
+          "observed_share": 0.16229361320875463
+        },
+        {
+          "bin": "(0.154, 0.245]",
+          "visits": 8875,
+          "oob": 2031,
+          "mean_probability": 0.18940809981372853,
+          "observed_share": 0.2288450704225352
+        },
+        {
+          "bin": "(0.245, 0.491]",
+          "visits": 8875,
+          "oob": 3053,
+          "mean_probability": 0.3675525656639227,
+          "observed_share": 0.344
+        },
+        {
+          "bin": "(0.491, 0.97]",
+          "visits": 8874,
+          "oob": 5115,
+          "mean_probability": 0.6294145519480697,
+          "observed_share": 0.5764029749830967
+        }
+      ],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "Business Education",
+            "top_visits": 154,
+            "top_oob": 4,
+            "top_violations": 0,
+            "rest_visits": 4371,
+            "rest_oob": 36,
+            "rest_violations": 0
+          },
+          {
+            "program": "Business Info Check",
+            "top_visits": 1,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 7,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "Check UNL - FTR",
+            "top_visits": 180,
+            "top_oob": 137,
+            "top_violations": 9,
+            "rest_visits": 940,
+            "rest_oob": 418,
+            "rest_violations": 186
+          },
+          {
+            "program": "Consumer Request to Inspect",
+            "top_visits": 195,
+            "top_oob": 53,
+            "top_violations": 60,
+            "rest_visits": 1986,
+            "rest_oob": 320,
+            "rest_violations": 930
+          },
+          {
+            "program": "External to DCA - Community Board",
+            "top_visits": 4,
+            "top_oob": 0,
+            "top_violations": 3,
+            "rest_visits": 11,
+            "rest_oob": 5,
+            "rest_violations": 4
+          },
+          {
+            "program": "External to DCA - External Agencies",
+            "top_visits": 6,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 63,
+            "rest_oob": 10,
+            "rest_violations": 34
+          },
+          {
+            "program": "External to DCA - Public Official",
+            "top_visits": 4,
+            "top_oob": 1,
+            "top_violations": 1,
+            "rest_visits": 17,
+            "rest_oob": 1,
+            "rest_violations": 5
+          },
+          {
+            "program": "Legal Case-Related",
+            "top_visits": 15,
+            "top_oob": 5,
+            "top_violations": 3,
+            "rest_visits": 482,
+            "rest_oob": 149,
+            "rest_violations": 172
+          },
+          {
+            "program": "License Revoked",
+            "top_visits": 1,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 124,
+            "rest_oob": 4,
+            "rest_violations": 55
+          },
+          {
+            "program": "License Suspended",
+            "top_visits": 24,
+            "top_oob": 16,
+            "top_violations": 1,
+            "rest_visits": 226,
+            "rest_oob": 25,
+            "rest_violations": 103
+          },
+          {
+            "program": "Mediation",
+            "top_visits": 19,
+            "top_oob": 8,
+            "top_violations": 2,
+            "rest_visits": 88,
+            "rest_oob": 23,
+            "rest_violations": 22
+          },
+          {
+            "program": "Patrol",
+            "top_visits": 13686,
+            "top_oob": 6687,
+            "top_violations": 1334,
+            "rest_visits": 19759,
+            "rest_oob": 2411,
+            "rest_violations": 6401
+          },
+          {
+            "program": "Price Gouging",
+            "top_visits": 4,
+            "top_oob": 4,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 1
+          },
+          {
+            "program": "Qualifying - Site",
+            "top_visits": 9,
+            "top_oob": 0,
+            "top_violations": 1,
+            "rest_visits": 92,
+            "rest_oob": 0,
+            "rest_violations": 21
+          },
+          {
+            "program": "Scale",
+            "top_visits": 778,
+            "top_oob": 100,
+            "top_violations": 20,
+            "rest_visits": 5529,
+            "rest_oob": 165,
+            "rest_violations": 170
+          },
+          {
+            "program": "Scale - Condemned Follow-up",
+            "top_visits": 6,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 160,
+            "rest_oob": 4,
+            "rest_violations": 15
+          },
+          {
+            "program": "Sealing Order",
+            "top_visits": 6,
+            "top_oob": 0,
+            "top_violations": 6,
+            "rest_visits": 112,
+            "rest_oob": 2,
+            "rest_violations": 105
+          },
+          {
+            "program": "Sealing Order Follow-up",
+            "top_visits": 123,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 520,
+            "rest_oob": 3,
+            "rest_violations": 0
+          },
+          {
+            "program": "Sweep",
+            "top_visits": 170,
+            "top_oob": 56,
+            "top_violations": 18,
+            "rest_visits": 752,
+            "rest_oob": 181,
+            "rest_violations": 159
+          },
+          {
+            "program": "Tobacco - Adult Inspection",
+            "top_visits": 873,
+            "top_oob": 381,
+            "top_violations": 106,
+            "rest_visits": 12795,
+            "rest_oob": 1395,
+            "rest_violations": 2095
+          },
+          {
+            "program": "Tobacco - Sale to Minor",
+            "top_visits": 416,
+            "top_oob": 202,
+            "top_violations": 28,
+            "rest_visits": 7637,
+            "rest_oob": 1023,
+            "rest_violations": 1503
+          },
+          {
+            "program": "Tobacco - State Suspension",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 32,
+            "rest_oob": 1,
+            "rest_violations": 6
+          },
+          {
+            "program": "Tobacco - T21",
+            "top_visits": 1054,
+            "top_oob": 505,
+            "top_violations": 182,
+            "rest_visits": 12923,
+            "rest_oob": 1048,
+            "rest_violations": 3738
+          },
+          {
+            "program": "WAM - Condemned Follow-up",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "WAM - Other",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 108,
+            "rest_oob": 3,
+            "rest_violations": 2
+          },
+          {
+            "program": "WAM - Petroleum",
+            "top_visits": 21,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 2256,
+            "rest_oob": 28,
+            "rest_violations": 219
+          }
+        ],
+        "comparable_top_visits": 17749,
+        "scenario_same_program_net_per_1000": 192.40953254856692
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_planned_type",
+      "training_warnings": [],
+      "visits": 88745,
+      "oob": 15423,
+      "violations": 17720,
+      "base_rate": 0.17379007268015098,
+      "roc_auc": 0.8152758853363349,
+      "average_precision": 0.5028029007819477,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4438,
+          "oob": 2960,
+          "precision": 0.6669671022983326,
+          "recall": 0.19192115671399856,
+          "violations": 225,
+          "rest_visits": 84307,
+          "rest_oob": 12463,
+          "rest_violations": 17495,
+          "violation_rate": 0.050698512843623256,
+          "rest_violation_rate": 0.20751539018112375,
+          "scenario_net_violations_per_1000": 156.8168773375005
+        },
+        {
+          "budget": 0.1,
+          "selected": 8875,
+          "oob": 5252,
+          "precision": 0.5917746478873239,
+          "recall": 0.3405303767101083,
+          "violations": 609,
+          "rest_visits": 79870,
+          "rest_oob": 10171,
+          "rest_violations": 17111,
+          "violation_rate": 0.06861971830985915,
+          "rest_violation_rate": 0.21423563290346814,
+          "scenario_net_violations_per_1000": 145.615914593609
+        },
+        {
+          "budget": 0.2,
+          "selected": 17749,
+          "oob": 8464,
+          "precision": 0.4768719364471238,
+          "recall": 0.5487907670362445,
+          "violations": 1930,
+          "rest_visits": 70996,
+          "rest_oob": 6959,
+          "rest_violations": 15790,
+          "violation_rate": 0.10873852048002704,
+          "rest_violation_rate": 0.22240689616316411,
+          "scenario_net_violations_per_1000": 113.66837568313707
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5252,
+        "fp": 3623,
+        "fn": 10171,
+        "tn": 69699
+      },
+      "average_precision_ci95": [
+        0.4910293762315272,
+        0.5145658387513292
+      ],
+      "p10_ci95": [
+        0.5785413108406562,
+        0.6037167993649354
+      ],
+      "delta_ap_rule_ci95": [
+        0.0648211095545724,
+        0.08143651931632541
+      ],
+      "delta_p10_rule_ci95": [
+        0.03505254324328909,
+        0.05132436820126446
+      ],
+      "delta_ap_rule": 0.07308726020059547,
+      "delta_p10_rule": 0.04473239436619714,
+      "brier_calibrated": 0.11259072429581696,
+      "brier_uncalibrated": 0.11297300375010098,
+      "calibration": [
+        {
+          "bin": "(0.00209, 0.0259]",
+          "visits": 8876,
+          "oob": 84,
+          "mean_probability": 0.014384616630145433,
+          "observed_share": 0.00946372239747634
+        },
+        {
+          "bin": "(0.0259, 0.0452]",
+          "visits": 8873,
+          "oob": 201,
+          "mean_probability": 0.036059311039808264,
+          "observed_share": 0.022652992223599684
+        },
+        {
+          "bin": "(0.0452, 0.0658]",
+          "visits": 8875,
+          "oob": 375,
+          "mean_probability": 0.05475569954399194,
+          "observed_share": 0.04225352112676056
+        },
+        {
+          "bin": "(0.0658, 0.0979]",
+          "visits": 8875,
+          "oob": 517,
+          "mean_probability": 0.0815471011681537,
+          "observed_share": 0.05825352112676056
+        },
+        {
+          "bin": "(0.0979, 0.131]",
+          "visits": 8973,
+          "oob": 1127,
+          "mean_probability": 0.11695377467478556,
+          "observed_share": 0.1255990192800624
+        },
+        {
+          "bin": "(0.131, 0.157]",
+          "visits": 8775,
+          "oob": 1074,
+          "mean_probability": 0.14680057728770388,
+          "observed_share": 0.12239316239316239
+        },
+        {
+          "bin": "(0.157, 0.21]",
+          "visits": 8876,
+          "oob": 1446,
+          "mean_probability": 0.1819050546409781,
+          "observed_share": 0.16291122127084273
+        },
+        {
+          "bin": "(0.21, 0.285]",
+          "visits": 8874,
+          "oob": 2135,
+          "mean_probability": 0.24270805270061696,
+          "observed_share": 0.2405904890691909
+        },
+        {
+          "bin": "(0.285, 0.482]",
+          "visits": 8874,
+          "oob": 3212,
+          "mean_probability": 0.38459179718075076,
+          "observed_share": 0.361956276763579
+        },
+        {
+          "bin": "(0.482, 0.951]",
+          "visits": 8874,
+          "oob": 5252,
+          "mean_probability": 0.6103784402617413,
+          "observed_share": 0.5918413342348433
+        }
+      ],
+      "calibration_uncalibrated": [
+        {
+          "bin": "(-3.8000000000000056e-05, 0.0129]",
+          "visits": 8876,
+          "oob": 84,
+          "mean_probability": 0.006424790511393716,
+          "observed_share": 0.00946372239747634
+        },
+        {
+          "bin": "(0.0129, 0.0257]",
+          "visits": 8873,
+          "oob": 201,
+          "mean_probability": 0.019517379966961762,
+          "observed_share": 0.022652992223599684
+        },
+        {
+          "bin": "(0.0257, 0.041]",
+          "visits": 8875,
+          "oob": 375,
+          "mean_probability": 0.032687624061777706,
+          "observed_share": 0.04225352112676056
+        },
+        {
+          "bin": "(0.041, 0.0674]",
+          "visits": 8875,
+          "oob": 517,
+          "mean_probability": 0.05375228310531878,
+          "observed_share": 0.05825352112676056
+        },
+        {
+          "bin": "(0.0674, 0.0976]",
+          "visits": 8973,
+          "oob": 1127,
+          "mean_probability": 0.08445913204829127,
+          "observed_share": 0.1255990192800624
+        },
+        {
+          "bin": "(0.0976, 0.122]",
+          "visits": 8775,
+          "oob": 1074,
+          "mean_probability": 0.11240309343651497,
+          "observed_share": 0.12239316239316239
+        },
+        {
+          "bin": "(0.122, 0.176]",
+          "visits": 8876,
+          "oob": 1446,
+          "mean_probability": 0.14753669893740795,
+          "observed_share": 0.16291122127084273
+        },
+        {
+          "bin": "(0.176, 0.259]",
+          "visits": 8874,
+          "oob": 2135,
+          "mean_probability": 0.21246219032494984,
+          "observed_share": 0.2405904890691909
+        },
+        {
+          "bin": "(0.259, 0.496]",
+          "visits": 8874,
+          "oob": 3212,
+          "mean_probability": 0.3780317202477155,
+          "observed_share": 0.361956276763579
+        },
+        {
+          "bin": "(0.496, 0.975]",
+          "visits": 8874,
+          "oob": 5252,
+          "mean_probability": 0.6456354290911547,
+          "observed_share": 0.5918413342348433
+        }
+      ],
+      "program_tradeoff": {
+        "programs": [
+          {
+            "program": "Business Education",
+            "top_visits": 2,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 4523,
+            "rest_oob": 40,
+            "rest_violations": 0
+          },
+          {
+            "program": "Business Info Check",
+            "top_visits": 1,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 7,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "Check UNL - FTR",
+            "top_visits": 603,
+            "top_oob": 386,
+            "top_violations": 50,
+            "rest_visits": 517,
+            "rest_oob": 169,
+            "rest_violations": 145
+          },
+          {
+            "program": "Consumer Request to Inspect",
+            "top_visits": 88,
+            "top_oob": 30,
+            "top_violations": 20,
+            "rest_visits": 2093,
+            "rest_oob": 343,
+            "rest_violations": 970
+          },
+          {
+            "program": "External to DCA - Community Board",
+            "top_visits": 4,
+            "top_oob": 0,
+            "top_violations": 3,
+            "rest_visits": 11,
+            "rest_oob": 5,
+            "rest_violations": 4
+          },
+          {
+            "program": "External to DCA - External Agencies",
+            "top_visits": 6,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 63,
+            "rest_oob": 10,
+            "rest_violations": 34
+          },
+          {
+            "program": "External to DCA - Public Official",
+            "top_visits": 7,
+            "top_oob": 2,
+            "top_violations": 1,
+            "rest_visits": 14,
+            "rest_oob": 0,
+            "rest_violations": 5
+          },
+          {
+            "program": "Legal Case-Related",
+            "top_visits": 16,
+            "top_oob": 4,
+            "top_violations": 4,
+            "rest_visits": 481,
+            "rest_oob": 150,
+            "rest_violations": 171
+          },
+          {
+            "program": "License Revoked",
+            "top_visits": 1,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 124,
+            "rest_oob": 4,
+            "rest_violations": 55
+          },
+          {
+            "program": "License Suspended",
+            "top_visits": 21,
+            "top_oob": 14,
+            "top_violations": 0,
+            "rest_visits": 229,
+            "rest_oob": 27,
+            "rest_violations": 104
+          },
+          {
+            "program": "Mediation",
+            "top_visits": 18,
+            "top_oob": 8,
+            "top_violations": 2,
+            "rest_visits": 89,
+            "rest_oob": 23,
+            "rest_violations": 22
+          },
+          {
+            "program": "Patrol",
+            "top_visits": 14306,
+            "top_oob": 6857,
+            "top_violations": 1467,
+            "rest_visits": 19139,
+            "rest_oob": 2241,
+            "rest_violations": 6268
+          },
+          {
+            "program": "Price Gouging",
+            "top_visits": 3,
+            "top_oob": 3,
+            "top_violations": 0,
+            "rest_visits": 4,
+            "rest_oob": 1,
+            "rest_violations": 1
+          },
+          {
+            "program": "Qualifying - Site",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 101,
+            "rest_oob": 0,
+            "rest_violations": 22
+          },
+          {
+            "program": "Scale",
+            "top_visits": 40,
+            "top_oob": 14,
+            "top_violations": 0,
+            "rest_visits": 6267,
+            "rest_oob": 251,
+            "rest_violations": 190
+          },
+          {
+            "program": "Scale - Condemned Follow-up",
+            "top_visits": 4,
+            "top_oob": 1,
+            "top_violations": 0,
+            "rest_visits": 162,
+            "rest_oob": 4,
+            "rest_violations": 15
+          },
+          {
+            "program": "Sealing Order",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 118,
+            "rest_oob": 2,
+            "rest_violations": 111
+          },
+          {
+            "program": "Sealing Order Follow-up",
+            "top_visits": 2,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 641,
+            "rest_oob": 4,
+            "rest_violations": 0
+          },
+          {
+            "program": "Sweep",
+            "top_visits": 381,
+            "top_oob": 96,
+            "top_violations": 64,
+            "rest_visits": 541,
+            "rest_oob": 141,
+            "rest_violations": 113
+          },
+          {
+            "program": "Tobacco - Adult Inspection",
+            "top_visits": 1052,
+            "top_oob": 433,
+            "top_violations": 158,
+            "rest_visits": 12616,
+            "rest_oob": 1343,
+            "rest_violations": 2043
+          },
+          {
+            "program": "Tobacco - Sale to Minor",
+            "top_visits": 342,
+            "top_oob": 165,
+            "top_violations": 30,
+            "rest_visits": 7711,
+            "rest_oob": 1060,
+            "rest_violations": 1501
+          },
+          {
+            "program": "Tobacco - State Suspension",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 32,
+            "rest_oob": 1,
+            "rest_violations": 6
+          },
+          {
+            "program": "Tobacco - T21",
+            "top_visits": 851,
+            "top_oob": 447,
+            "top_violations": 131,
+            "rest_visits": 13126,
+            "rest_oob": 1106,
+            "rest_violations": 3789
+          },
+          {
+            "program": "WAM - Condemned Follow-up",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 3,
+            "rest_oob": 0,
+            "rest_violations": 0
+          },
+          {
+            "program": "WAM - Other",
+            "top_visits": 0,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 108,
+            "rest_oob": 3,
+            "rest_violations": 2
+          },
+          {
+            "program": "WAM - Petroleum",
+            "top_visits": 1,
+            "top_oob": 0,
+            "top_violations": 0,
+            "rest_visits": 2276,
+            "rest_oob": 31,
+            "rest_violations": 219
+          }
+        ],
+        "comparable_top_visits": 17749,
+        "scenario_same_program_net_per_1000": 200.40597985094882
+      }
+    }
+  ],
+  "splits": [
+    {
+      "era": "archive",
+      "split": "train_total",
+      "visits": 295247,
+      "oob": 31201,
+      "oob_share": 0.10567761907826329,
+      "businesses": 106031,
+      "first": "2015-01-02 09:13:00",
+      "last": "2018-12-31 16:33:00"
+    },
+    {
+      "era": "archive",
+      "split": "fit",
+      "visits": 227834,
+      "oob": 22251,
+      "oob_share": 0.09766321093427671,
+      "businesses": 90994,
+      "first": "2015-01-02 09:13:00",
+      "last": "2017-12-29 18:12:00"
+    },
+    {
+      "era": "archive",
+      "split": "validation",
+      "visits": 67413,
+      "oob": 8950,
+      "oob_share": 0.132763710263599,
+      "businesses": 41193,
+      "first": "2018-01-02 08:39:00",
+      "last": "2018-12-31 16:33:00"
+    },
+    {
+      "era": "archive",
+      "split": "test",
+      "visits": 65916,
+      "oob": 9448,
+      "oob_share": 0.14333394016627224,
+      "businesses": 40414,
+      "first": "2019-01-02 00:00:00",
+      "last": "2019-12-31 16:51:00"
+    },
+    {
+      "era": "live",
+      "split": "train_total",
+      "visits": 94896,
+      "oob": 14479,
+      "oob_share": 0.1525775585904569,
+      "businesses": 33158,
+      "first": "2024-01-02 00:00:00",
+      "last": "2024-12-31 00:00:00"
+    },
+    {
+      "era": "live",
+      "split": "fit",
+      "visits": 68824,
+      "oob": 10488,
+      "oob_share": 0.15238870161571544,
+      "businesses": 26911,
+      "first": "2024-01-02 00:00:00",
+      "last": "2024-09-30 00:00:00"
+    },
+    {
+      "era": "live",
+      "split": "validation",
+      "visits": 26072,
+      "oob": 3991,
+      "oob_share": 0.15307609696225835,
+      "businesses": 11511,
+      "first": "2024-10-01 00:00:00",
+      "last": "2024-12-31 00:00:00"
+    },
+    {
+      "era": "live",
+      "split": "test",
+      "visits": 88745,
+      "oob": 15423,
+      "oob_share": 0.17379007268015098,
+      "businesses": 38825,
+      "first": "2025-01-02 00:00:00",
+      "last": "2025-12-31 00:00:00"
+    }
+  ],
+  "sensitivities": [
+    {
+      "era": "archive",
+      "ranker": "staleness_rule",
+      "subset": "one_per_business_timestamp",
+      "visits": 58145,
+      "oob": 9162,
+      "violations": 14066,
+      "base_rate": 0.15757158827070256,
+      "roc_auc": 0.7786648182156476,
+      "average_precision": 0.4555604601522029,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2908,
+          "oob": 1948,
+          "precision": 0.6698762035763411,
+          "recall": 0.21261733246016154,
+          "violations": 188,
+          "rest_visits": 55237,
+          "rest_oob": 7214,
+          "rest_violations": 13878,
+          "violation_rate": 0.06464924346629987,
+          "rest_violation_rate": 0.2512446367471079,
+          "scenario_net_violations_per_1000": 186.59539328080805
+        },
+        {
+          "budget": 0.1,
+          "selected": 5815,
+          "oob": 3304,
+          "precision": 0.5681857265692175,
+          "recall": 0.3606199519755512,
+          "violations": 461,
+          "rest_visits": 52330,
+          "rest_oob": 5858,
+          "rest_violations": 13605,
+          "violation_rate": 0.07927773000859845,
+          "rest_violation_rate": 0.25998471240206383,
+          "scenario_net_violations_per_1000": 180.70698239346538
+        },
+        {
+          "budget": 0.2,
+          "selected": 11629,
+          "oob": 5241,
+          "precision": 0.4506836357382406,
+          "recall": 0.5720366732154551,
+          "violations": 1555,
+          "rest_visits": 46516,
+          "rest_oob": 3921,
+          "rest_violations": 12511,
+          "violation_rate": 0.1337174305615272,
+          "rest_violation_rate": 0.2689612176455413,
+          "scenario_net_violations_per_1000": 135.24378708401412
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3304,
+        "fp": 2511,
+        "fn": 5858,
+        "tn": 46472
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "staleness_rule",
+      "subset": "has_prior_history",
+      "visits": 55369,
+      "oob": 8705,
+      "violations": 13380,
+      "base_rate": 0.15721793783525076,
+      "roc_auc": 0.8030051873153726,
+      "average_precision": 0.4620728254410785,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2769,
+          "oob": 1840,
+          "precision": 0.6644998194293968,
+          "recall": 0.21137277426766227,
+          "violations": 184,
+          "rest_visits": 52600,
+          "rest_oob": 6865,
+          "rest_violations": 13196,
+          "violation_rate": 0.06644998194293969,
+          "rest_violation_rate": 0.2508745247148289,
+          "scenario_net_violations_per_1000": 184.4245427718892
+        },
+        {
+          "budget": 0.1,
+          "selected": 5537,
+          "oob": 3143,
+          "precision": 0.5676359039190898,
+          "recall": 0.3610568638713383,
+          "violations": 453,
+          "rest_visits": 49832,
+          "rest_oob": 5562,
+          "rest_violations": 12927,
+          "violation_rate": 0.08181325627596171,
+          "rest_violation_rate": 0.2594116230534596,
+          "scenario_net_violations_per_1000": 177.59836677749792
+        },
+        {
+          "budget": 0.2,
+          "selected": 11074,
+          "oob": 5046,
+          "precision": 0.4556619107820119,
+          "recall": 0.579666858127513,
+          "violations": 1454,
+          "rest_visits": 44295,
+          "rest_oob": 3659,
+          "rest_violations": 11926,
+          "violation_rate": 0.13129853711396064,
+          "rest_violation_rate": 0.26924032057794334,
+          "scenario_net_violations_per_1000": 137.9417834639827
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3143,
+        "fp": 2394,
+        "fn": 5562,
+        "tn": 44270
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "staleness_rule",
+      "subset": "cold_start",
+      "visits": 10547,
+      "oob": 743,
+      "violations": 2960,
+      "base_rate": 0.07044657248506685,
+      "roc_auc": 0.5,
+      "average_precision": 0.07044657248506685,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 528,
+          "oob": 40,
+          "precision": 0.07575757575757576,
+          "recall": 0.05383580080753701,
+          "violations": 151,
+          "rest_visits": 10019,
+          "rest_oob": 703,
+          "rest_violations": 2809,
+          "violation_rate": 0.2859848484848485,
+          "rest_violation_rate": 0.28036730212596067,
+          "scenario_net_violations_per_1000": -5.617546358887838
+        },
+        {
+          "budget": 0.1,
+          "selected": 1055,
+          "oob": 75,
+          "precision": 0.07109004739336493,
+          "recall": 0.1009421265141319,
+          "violations": 299,
+          "rest_visits": 9492,
+          "rest_oob": 668,
+          "rest_violations": 2661,
+          "violation_rate": 0.2834123222748815,
+          "rest_violation_rate": 0.2803413400758534,
+          "scenario_net_violations_per_1000": -3.070982199028127
+        },
+        {
+          "budget": 0.2,
+          "selected": 2110,
+          "oob": 153,
+          "precision": 0.07251184834123223,
+          "recall": 0.20592193808882908,
+          "violations": 601,
+          "rest_visits": 8437,
+          "rest_oob": 590,
+          "rest_violations": 2359,
+          "violation_rate": 0.2848341232227488,
+          "rest_violation_rate": 0.27960175417802535,
+          "scenario_net_violations_per_1000": -5.232369044723462
+        }
+      ],
+      "confusion_top10": {
+        "tp": 75,
+        "fp": 980,
+        "fn": 668,
+        "tn": 8824
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "staleness_rule",
+      "subset": "exclude_cross_switch_links",
+      "visits": 65697,
+      "oob": 9448,
+      "violations": 16283,
+      "base_rate": 0.14381174178425193,
+      "roc_auc": 0.7760110127990383,
+      "average_precision": 0.4369754779324254,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3285,
+          "oob": 2135,
+          "precision": 0.649923896499239,
+          "recall": 0.22597375105842507,
+          "violations": 227,
+          "rest_visits": 62412,
+          "rest_oob": 7313,
+          "rest_violations": 16056,
+          "violation_rate": 0.06910197869101979,
+          "rest_violation_rate": 0.25725821957315903,
+          "scenario_net_violations_per_1000": 188.15624088213923
+        },
+        {
+          "budget": 0.1,
+          "selected": 6570,
+          "oob": 3587,
+          "precision": 0.5459665144596652,
+          "recall": 0.3796570702794242,
+          "violations": 579,
+          "rest_visits": 59127,
+          "rest_oob": 5861,
+          "rest_violations": 15704,
+          "violation_rate": 0.08812785388127854,
+          "rest_violation_rate": 0.26559778104757553,
+          "scenario_net_violations_per_1000": 177.469927166297
+        },
+        {
+          "budget": 0.2,
+          "selected": 13140,
+          "oob": 5488,
+          "precision": 0.4176560121765601,
+          "recall": 0.5808636748518204,
+          "violations": 1937,
+          "rest_visits": 52557,
+          "rest_oob": 3960,
+          "rest_violations": 14346,
+          "violation_rate": 0.14741248097412482,
+          "rest_violation_rate": 0.2729607854329585,
+          "scenario_net_violations_per_1000": 125.54830445883367
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3587,
+        "fp": 2983,
+        "fn": 5861,
+        "tn": 53266
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "logistic_history",
+      "subset": "one_per_business_timestamp",
+      "visits": 58145,
+      "oob": 9162,
+      "violations": 14066,
+      "base_rate": 0.15757158827070256,
+      "roc_auc": 0.8356274871444,
+      "average_precision": 0.5762241445013145,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2908,
+          "oob": 2213,
+          "precision": 0.7610041265474553,
+          "recall": 0.24154114822091247,
+          "violations": 142,
+          "rest_visits": 55237,
+          "rest_oob": 6949,
+          "rest_violations": 13924,
+          "violation_rate": 0.04883081155433287,
+          "rest_violation_rate": 0.2520774118797183,
+          "scenario_net_violations_per_1000": 203.24660032538543
+        },
+        {
+          "budget": 0.1,
+          "selected": 5815,
+          "oob": 3879,
+          "precision": 0.6670679277730008,
+          "recall": 0.42337917485265225,
+          "violations": 401,
+          "rest_visits": 52330,
+          "rest_oob": 5283,
+          "rest_violations": 13665,
+          "violation_rate": 0.06895958727429063,
+          "rest_violation_rate": 0.2611312822472769,
+          "scenario_net_violations_per_1000": 192.17169497298624
+        },
+        {
+          "budget": 0.2,
+          "selected": 11629,
+          "oob": 5861,
+          "precision": 0.5039986241293318,
+          "recall": 0.6397074874481554,
+          "violations": 1336,
+          "rest_visits": 46516,
+          "rest_oob": 3301,
+          "rest_violations": 12730,
+          "violation_rate": 0.11488520079112563,
+          "rest_violation_rate": 0.2736692750881417,
+          "scenario_net_violations_per_1000": 158.78407429701608
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3879,
+        "fp": 1936,
+        "fn": 5283,
+        "tn": 47047
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "logistic_history",
+      "subset": "has_prior_history",
+      "visits": 55369,
+      "oob": 8705,
+      "violations": 13380,
+      "base_rate": 0.15721793783525076,
+      "roc_auc": 0.8505901723964928,
+      "average_precision": 0.58860195634458,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2769,
+          "oob": 2084,
+          "precision": 0.7526182737450343,
+          "recall": 0.23940264215967835,
+          "violations": 148,
+          "rest_visits": 52600,
+          "rest_oob": 6621,
+          "rest_violations": 13232,
+          "violation_rate": 0.05344889851932105,
+          "rest_violation_rate": 0.2515589353612167,
+          "scenario_net_violations_per_1000": 198.11003684189566
+        },
+        {
+          "budget": 0.1,
+          "selected": 5537,
+          "oob": 3742,
+          "precision": 0.6758172295466859,
+          "recall": 0.4298678920160827,
+          "violations": 387,
+          "rest_visits": 49832,
+          "rest_oob": 4963,
+          "rest_violations": 12993,
+          "violation_rate": 0.06989344410330504,
+          "rest_violation_rate": 0.2607360732059721,
+          "scenario_net_violations_per_1000": 190.84262910266702
+        },
+        {
+          "budget": 0.2,
+          "selected": 11074,
+          "oob": 5697,
+          "precision": 0.5144482571789778,
+          "recall": 0.6544514646754739,
+          "violations": 1243,
+          "rest_visits": 44295,
+          "rest_oob": 3008,
+          "rest_violations": 12137,
+          "violation_rate": 0.11224489795918367,
+          "rest_violation_rate": 0.2740038379049554,
+          "scenario_net_violations_per_1000": 161.75893994577171
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3742,
+        "fp": 1795,
+        "fn": 4963,
+        "tn": 44869
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "logistic_history",
+      "subset": "cold_start",
+      "visits": 10547,
+      "oob": 743,
+      "violations": 2960,
+      "base_rate": 0.07044657248506685,
+      "roc_auc": 0.5512622090140372,
+      "average_precision": 0.08076106592913707,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 528,
+          "oob": 53,
+          "precision": 0.10037878787878787,
+          "recall": 0.07133243606998654,
+          "violations": 136,
+          "rest_visits": 10019,
+          "rest_oob": 690,
+          "rest_violations": 2824,
+          "violation_rate": 0.25757575757575757,
+          "rest_violation_rate": 0.28186445753069167,
+          "scenario_net_violations_per_1000": 24.288699954934103
+        },
+        {
+          "budget": 0.1,
+          "selected": 1055,
+          "oob": 93,
+          "precision": 0.0881516587677725,
+          "recall": 0.12516823687752354,
+          "violations": 268,
+          "rest_visits": 9492,
+          "rest_oob": 650,
+          "rest_violations": 2692,
+          "violation_rate": 0.25402843601895736,
+          "rest_violation_rate": 0.2836072482090181,
+          "scenario_net_violations_per_1000": 29.578812190060756
+        },
+        {
+          "budget": 0.2,
+          "selected": 2110,
+          "oob": 173,
+          "precision": 0.08199052132701422,
+          "recall": 0.23283983849259757,
+          "violations": 515,
+          "rest_visits": 8437,
+          "rest_oob": 570,
+          "rest_violations": 2445,
+          "violation_rate": 0.24407582938388625,
+          "rest_violation_rate": 0.2897949508119,
+          "scenario_net_violations_per_1000": 45.719121428013736
+        }
+      ],
+      "confusion_top10": {
+        "tp": 93,
+        "fp": 962,
+        "fn": 650,
+        "tn": 8842
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "logistic_history",
+      "subset": "exclude_cross_switch_links",
+      "visits": 65697,
+      "oob": 9448,
+      "violations": 16283,
+      "base_rate": 0.14381174178425193,
+      "roc_auc": 0.8337806756229622,
+      "average_precision": 0.5584629511515382,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3285,
+          "oob": 2444,
+          "precision": 0.7439878234398782,
+          "recall": 0.25867908552074514,
+          "violations": 184,
+          "rest_visits": 62412,
+          "rest_oob": 7004,
+          "rest_violations": 16099,
+          "violation_rate": 0.056012176560121765,
+          "rest_violation_rate": 0.2579471896430174,
+          "scenario_net_violations_per_1000": 201.93501308289564
+        },
+        {
+          "budget": 0.1,
+          "selected": 6570,
+          "oob": 4170,
+          "precision": 0.634703196347032,
+          "recall": 0.4413632514817951,
+          "violations": 495,
+          "rest_visits": 59127,
+          "rest_oob": 5278,
+          "rest_violations": 15788,
+          "violation_rate": 0.07534246575342465,
+          "rest_violation_rate": 0.267018451807127,
+          "scenario_net_violations_per_1000": 191.67598605370236
+        },
+        {
+          "budget": 0.2,
+          "selected": 13140,
+          "oob": 6155,
+          "precision": 0.4684170471841705,
+          "recall": 0.6514606265876376,
+          "violations": 1727,
+          "rest_visits": 52557,
+          "rest_oob": 3293,
+          "rest_violations": 14556,
+          "violation_rate": 0.13143074581430747,
+          "rest_violation_rate": 0.276956447285804,
+          "scenario_net_violations_per_1000": 145.52570147149652
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4170,
+        "fp": 2400,
+        "fn": 5278,
+        "tn": 53849
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "lightgbm_history",
+      "subset": "one_per_business_timestamp",
+      "visits": 58145,
+      "oob": 9162,
+      "violations": 14066,
+      "base_rate": 0.15757158827070256,
+      "roc_auc": 0.8179680162748684,
+      "average_precision": 0.5117200381243149,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2908,
+          "oob": 2208,
+          "precision": 0.7592847317744154,
+          "recall": 0.2409954158480681,
+          "violations": 177,
+          "rest_visits": 55237,
+          "rest_oob": 6954,
+          "rest_violations": 13889,
+          "violation_rate": 0.060866574965612104,
+          "rest_violation_rate": 0.2514437786266452,
+          "scenario_net_violations_per_1000": 190.57720366103308
+        },
+        {
+          "budget": 0.1,
+          "selected": 5815,
+          "oob": 3327,
+          "precision": 0.5721410146173689,
+          "recall": 0.36313032089063524,
+          "violations": 565,
+          "rest_visits": 52330,
+          "rest_oob": 5835,
+          "rest_violations": 13501,
+          "violation_rate": 0.09716251074806535,
+          "rest_violation_rate": 0.2579973246703612,
+          "scenario_net_violations_per_1000": 160.8348139222958
+        },
+        {
+          "budget": 0.2,
+          "selected": 11629,
+          "oob": 4928,
+          "precision": 0.4237681657924155,
+          "recall": 0.5378738266753984,
+          "violations": 1719,
+          "rest_visits": 46516,
+          "rest_oob": 4234,
+          "rest_violations": 12347,
+          "violation_rate": 0.14782010491013844,
+          "rest_violation_rate": 0.2654355490583885,
+          "scenario_net_violations_per_1000": 117.61544414825006
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3327,
+        "fp": 2488,
+        "fn": 5835,
+        "tn": 46495
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "lightgbm_history",
+      "subset": "has_prior_history",
+      "visits": 55369,
+      "oob": 8705,
+      "violations": 13380,
+      "base_rate": 0.15721793783525076,
+      "roc_auc": 0.8255997536447394,
+      "average_precision": 0.5140875841492563,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2769,
+          "oob": 2116,
+          "precision": 0.7641747923438065,
+          "recall": 0.2430786904078116,
+          "violations": 176,
+          "rest_visits": 52600,
+          "rest_oob": 6589,
+          "rest_violations": 13204,
+          "violation_rate": 0.06356085229324666,
+          "rest_violation_rate": 0.25102661596958176,
+          "scenario_net_violations_per_1000": 187.46576367633511
+        },
+        {
+          "budget": 0.1,
+          "selected": 5537,
+          "oob": 3207,
+          "precision": 0.579194509662272,
+          "recall": 0.36840896036760484,
+          "violations": 553,
+          "rest_visits": 49832,
+          "rest_oob": 5498,
+          "rest_violations": 12827,
+          "violation_rate": 0.09987357774968394,
+          "rest_violation_rate": 0.25740488039813775,
+          "scenario_net_violations_per_1000": 157.5313026484538
+        },
+        {
+          "budget": 0.2,
+          "selected": 11074,
+          "oob": 4699,
+          "precision": 0.4243272530251038,
+          "recall": 0.539804709936818,
+          "violations": 1682,
+          "rest_visits": 44295,
+          "rest_oob": 4006,
+          "rest_violations": 11698,
+          "violation_rate": 0.151887303594004,
+          "rest_violation_rate": 0.26409301275539,
+          "scenario_net_violations_per_1000": 112.205709161386
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3207,
+        "fp": 2330,
+        "fn": 5498,
+        "tn": 44334
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "lightgbm_history",
+      "subset": "cold_start",
+      "visits": 10547,
+      "oob": 743,
+      "violations": 2960,
+      "base_rate": 0.07044657248506685,
+      "roc_auc": 0.543294192004472,
+      "average_precision": 0.08073156796129738,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 528,
+          "oob": 54,
+          "precision": 0.10227272727272728,
+          "recall": 0.07267833109017496,
+          "violations": 135,
+          "rest_visits": 10019,
+          "rest_oob": 689,
+          "rest_violations": 2825,
+          "violation_rate": 0.2556818181818182,
+          "rest_violation_rate": 0.2819642678910071,
+          "scenario_net_violations_per_1000": 26.282449709188917
+        },
+        {
+          "budget": 0.1,
+          "selected": 1055,
+          "oob": 105,
+          "precision": 0.0995260663507109,
+          "recall": 0.14131897711978467,
+          "violations": 273,
+          "rest_visits": 9492,
+          "rest_oob": 638,
+          "rest_violations": 2687,
+          "violation_rate": 0.25876777251184835,
+          "rest_violation_rate": 0.2830804888327012,
+          "scenario_net_violations_per_1000": 24.312716320852857
+        },
+        {
+          "budget": 0.2,
+          "selected": 2110,
+          "oob": 200,
+          "precision": 0.0947867298578199,
+          "recall": 0.2691790040376851,
+          "violations": 549,
+          "rest_visits": 8437,
+          "rest_oob": 543,
+          "rest_violations": 2411,
+          "violation_rate": 0.26018957345971566,
+          "rest_violation_rate": 0.2857650823752519,
+          "scenario_net_violations_per_1000": 25.575508915536226
+        }
+      ],
+      "confusion_top10": {
+        "tp": 105,
+        "fp": 950,
+        "fn": 638,
+        "tn": 8854
+      }
+    },
+    {
+      "era": "archive",
+      "ranker": "lightgbm_history",
+      "subset": "exclude_cross_switch_links",
+      "visits": 65697,
+      "oob": 9448,
+      "violations": 16283,
+      "base_rate": 0.14381174178425193,
+      "roc_auc": 0.8163234897437786,
+      "average_precision": 0.48986390660146245,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3285,
+          "oob": 2342,
+          "precision": 0.7129375951293759,
+          "recall": 0.24788314987298898,
+          "violations": 255,
+          "rest_visits": 62412,
+          "rest_oob": 7106,
+          "rest_violations": 16028,
+          "violation_rate": 0.0776255707762557,
+          "rest_violation_rate": 0.2568095878997629,
+          "scenario_net_violations_per_1000": 179.18401712350718
+        },
+        {
+          "budget": 0.1,
+          "selected": 6570,
+          "oob": 3547,
+          "precision": 0.5398782343987824,
+          "recall": 0.3754233700254022,
+          "violations": 725,
+          "rest_visits": 59127,
+          "rest_oob": 5901,
+          "rest_violations": 15558,
+          "violation_rate": 0.11035007610350075,
+          "rest_violation_rate": 0.263128519965498,
+          "scenario_net_violations_per_1000": 152.77844386199726
+        },
+        {
+          "budget": 0.2,
+          "selected": 13140,
+          "oob": 5172,
+          "precision": 0.39360730593607307,
+          "recall": 0.5474174428450466,
+          "violations": 2151,
+          "rest_visits": 52557,
+          "rest_oob": 4276,
+          "rest_violations": 14132,
+          "violation_rate": 0.1636986301369863,
+          "rest_violation_rate": 0.26888901573529694,
+          "scenario_net_violations_per_1000": 105.19038559831066
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3547,
+        "fp": 3023,
+        "fn": 5901,
+        "tn": 53226
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "staleness_rule",
+      "subset": "one_per_business_timestamp",
+      "visits": 51807,
+      "oob": 11239,
+      "violations": 9578,
+      "base_rate": 0.216939795780493,
+      "roc_auc": 0.7478295524488294,
+      "average_precision": 0.4784217097927308,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2591,
+          "oob": 1649,
+          "precision": 0.6364338093400231,
+          "recall": 0.14672123854435448,
+          "violations": 103,
+          "rest_visits": 49216,
+          "rest_oob": 9590,
+          "rest_violations": 9475,
+          "violation_rate": 0.03975299112311849,
+          "rest_violation_rate": 0.19251869310793238,
+          "scenario_net_violations_per_1000": 152.76570198481386
+        },
+        {
+          "budget": 0.1,
+          "selected": 5181,
+          "oob": 3069,
+          "precision": 0.5923566878980892,
+          "recall": 0.2730669988433135,
+          "violations": 262,
+          "rest_visits": 46626,
+          "rest_oob": 8170,
+          "rest_violations": 9316,
+          "violation_rate": 0.05056938814900598,
+          "rest_violation_rate": 0.19980268519710034,
+          "scenario_net_violations_per_1000": 149.23329704809436
+        },
+        {
+          "budget": 0.2,
+          "selected": 10362,
+          "oob": 5407,
+          "precision": 0.5218104613009071,
+          "recall": 0.4810926238989234,
+          "violations": 739,
+          "rest_visits": 41445,
+          "rest_oob": 5832,
+          "rest_violations": 8839,
+          "violation_rate": 0.07131827832464775,
+          "rest_violation_rate": 0.21327059958981784,
+          "scenario_net_violations_per_1000": 141.9523212651701
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3069,
+        "fp": 2112,
+        "fn": 8170,
+        "tn": 38456
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "staleness_rule",
+      "subset": "has_prior_history",
+      "visits": 75514,
+      "oob": 13968,
+      "violations": 13635,
+      "base_rate": 0.18497232301295125,
+      "roc_auc": 0.7674685255999582,
+      "average_precision": 0.4566947787134662,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3776,
+          "oob": 2334,
+          "precision": 0.618114406779661,
+          "recall": 0.16709621993127147,
+          "violations": 160,
+          "rest_visits": 71738,
+          "rest_oob": 11634,
+          "rest_violations": 13475,
+          "violation_rate": 0.0423728813559322,
+          "rest_violation_rate": 0.1878362931779531,
+          "scenario_net_violations_per_1000": 145.4634118220209
+        },
+        {
+          "budget": 0.1,
+          "selected": 7552,
+          "oob": 4278,
+          "precision": 0.5664724576271186,
+          "recall": 0.30627147766323026,
+          "violations": 460,
+          "rest_visits": 67962,
+          "rest_oob": 9690,
+          "rest_violations": 13175,
+          "violation_rate": 0.06091101694915254,
+          "rest_violation_rate": 0.19385833259762808,
+          "scenario_net_violations_per_1000": 132.94731564847552
+        },
+        {
+          "budget": 0.2,
+          "selected": 15103,
+          "oob": 6997,
+          "precision": 0.46328543997881216,
+          "recall": 0.5009306987399771,
+          "violations": 1351,
+          "rest_visits": 60411,
+          "rest_oob": 6971,
+          "rest_violations": 12284,
+          "violation_rate": 0.08945242667019797,
+          "rest_violation_rate": 0.20334045124232342,
+          "scenario_net_violations_per_1000": 113.88802457212545
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4278,
+        "fp": 3274,
+        "fn": 9690,
+        "tn": 58272
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "staleness_rule",
+      "subset": "cold_start",
+      "visits": 13231,
+      "oob": 1455,
+      "violations": 4085,
+      "base_rate": 0.10996901216839242,
+      "roc_auc": 0.5,
+      "average_precision": 0.10996901216839242,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 662,
+          "oob": 67,
+          "precision": 0.10120845921450151,
+          "recall": 0.04604810996563574,
+          "violations": 202,
+          "rest_visits": 12569,
+          "rest_oob": 1388,
+          "rest_violations": 3883,
+          "violation_rate": 0.30513595166163143,
+          "rest_violation_rate": 0.30893468056329065,
+          "scenario_net_violations_per_1000": 3.7987289016592207
+        },
+        {
+          "budget": 0.1,
+          "selected": 1324,
+          "oob": 131,
+          "precision": 0.09894259818731117,
+          "recall": 0.09003436426116838,
+          "violations": 392,
+          "rest_visits": 11907,
+          "rest_oob": 1324,
+          "rest_violations": 3693,
+          "violation_rate": 0.29607250755287007,
+          "rest_violation_rate": 0.31015369110607205,
+          "scenario_net_violations_per_1000": 14.081183553201981
+        },
+        {
+          "budget": 0.2,
+          "selected": 2647,
+          "oob": 284,
+          "precision": 0.10729127313940309,
+          "recall": 0.19518900343642612,
+          "violations": 804,
+          "rest_visits": 10584,
+          "rest_oob": 1171,
+          "rest_violations": 3281,
+          "violation_rate": 0.3037400831129581,
+          "rest_violation_rate": 0.3099962207105064,
+          "scenario_net_violations_per_1000": 6.256137597548339
+        }
+      ],
+      "confusion_top10": {
+        "tp": 131,
+        "fp": 1193,
+        "fn": 1324,
+        "tn": 10583
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "staleness_rule",
+      "subset": "exclude_cross_switch_links",
+      "visits": 88033,
+      "oob": 15308,
+      "violations": 17578,
+      "base_rate": 0.173889336953188,
+      "roc_auc": 0.735965660933698,
+      "average_precision": 0.4306219297862445,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4402,
+          "oob": 2679,
+          "precision": 0.6085870059064061,
+          "recall": 0.1750065325320094,
+          "violations": 200,
+          "rest_visits": 83631,
+          "rest_oob": 12629,
+          "rest_violations": 17378,
+          "violation_rate": 0.04543389368468878,
+          "rest_violation_rate": 0.20779376068682665,
+          "scenario_net_violations_per_1000": 162.35986700213786
+        },
+        {
+          "budget": 0.1,
+          "selected": 8804,
+          "oob": 4834,
+          "precision": 0.5490686051794639,
+          "recall": 0.31578259733472697,
+          "violations": 573,
+          "rest_visits": 79229,
+          "rest_oob": 10474,
+          "rest_violations": 17005,
+          "violation_rate": 0.06508405270331667,
+          "rest_violation_rate": 0.21463100632344217,
+          "scenario_net_violations_per_1000": 149.5469536201255
+        },
+        {
+          "budget": 0.2,
+          "selected": 17607,
+          "oob": 7663,
+          "precision": 0.43522462656897826,
+          "recall": 0.5005879278808466,
+          "violations": 1718,
+          "rest_visits": 70426,
+          "rest_oob": 7645,
+          "rest_violations": 15860,
+          "violation_rate": 0.0975748281933322,
+          "rest_violation_rate": 0.22520092011473036,
+          "scenario_net_violations_per_1000": 127.62609192139817
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4834,
+        "fp": 3970,
+        "fn": 10474,
+        "tn": 68755
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "logistic_history",
+      "subset": "one_per_business_timestamp",
+      "visits": 51807,
+      "oob": 11239,
+      "violations": 9578,
+      "base_rate": 0.216939795780493,
+      "roc_auc": 0.7785144492998777,
+      "average_precision": 0.5037143043298921,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2591,
+          "oob": 1704,
+          "precision": 0.6576611346970281,
+          "recall": 0.15161491235875077,
+          "violations": 109,
+          "rest_visits": 49216,
+          "rest_oob": 9535,
+          "rest_violations": 9469,
+          "violation_rate": 0.04206869934388267,
+          "rest_violation_rate": 0.19239678153446033,
+          "scenario_net_violations_per_1000": 150.32808219057765
+        },
+        {
+          "budget": 0.1,
+          "selected": 5181,
+          "oob": 3150,
+          "precision": 0.6079907353792704,
+          "recall": 0.2802740457336062,
+          "violations": 284,
+          "rest_visits": 46626,
+          "rest_oob": 8089,
+          "rest_violations": 9294,
+          "violation_rate": 0.05481567265006755,
+          "rest_violation_rate": 0.1993308454510359,
+          "scenario_net_violations_per_1000": 144.51517280096837
+        },
+        {
+          "budget": 0.2,
+          "selected": 10362,
+          "oob": 5543,
+          "precision": 0.5349353406678248,
+          "recall": 0.4931933446036124,
+          "violations": 746,
+          "rest_visits": 41445,
+          "rest_oob": 5696,
+          "rest_violations": 8832,
+          "violation_rate": 0.07199382358618027,
+          "rest_violation_rate": 0.21310170104958379,
+          "scenario_net_violations_per_1000": 141.10787746340353
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3150,
+        "fp": 2031,
+        "fn": 8089,
+        "tn": 38537
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "logistic_history",
+      "subset": "has_prior_history",
+      "visits": 75514,
+      "oob": 13968,
+      "violations": 13635,
+      "base_rate": 0.18497232301295125,
+      "roc_auc": 0.7989355333091829,
+      "average_precision": 0.49058042620295317,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3776,
+          "oob": 2470,
+          "precision": 0.6541313559322034,
+          "recall": 0.1768327605956472,
+          "violations": 161,
+          "rest_visits": 71738,
+          "rest_oob": 11498,
+          "rest_violations": 13474,
+          "violation_rate": 0.04263771186440678,
+          "rest_violation_rate": 0.1878223535643592,
+          "scenario_net_violations_per_1000": 145.18464169995244
+        },
+        {
+          "budget": 0.1,
+          "selected": 7552,
+          "oob": 4463,
+          "precision": 0.590969279661017,
+          "recall": 0.3195160366552119,
+          "violations": 445,
+          "rest_visits": 67962,
+          "rest_oob": 9505,
+          "rest_violations": 13190,
+          "violation_rate": 0.05892478813559322,
+          "rest_violation_rate": 0.19407904417174304,
+          "scenario_net_violations_per_1000": 135.15425603614983
+        },
+        {
+          "budget": 0.2,
+          "selected": 15103,
+          "oob": 7375,
+          "precision": 0.4883135800834271,
+          "recall": 0.5279925544100802,
+          "violations": 1334,
+          "rest_visits": 60411,
+          "rest_oob": 6593,
+          "rest_violations": 12301,
+          "violation_rate": 0.0883268224855989,
+          "rest_violation_rate": 0.20362185694658258,
+          "scenario_net_violations_per_1000": 115.29503446098369
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4463,
+        "fp": 3089,
+        "fn": 9505,
+        "tn": 58457
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "logistic_history",
+      "subset": "cold_start",
+      "visits": 13231,
+      "oob": 1455,
+      "violations": 4085,
+      "base_rate": 0.10996901216839242,
+      "roc_auc": 0.515205368481996,
+      "average_precision": 0.11732505699262483,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 662,
+          "oob": 71,
+          "precision": 0.10725075528700906,
+          "recall": 0.04879725085910653,
+          "violations": 212,
+          "rest_visits": 12569,
+          "rest_oob": 1384,
+          "rest_violations": 3873,
+          "violation_rate": 0.3202416918429003,
+          "rest_violation_rate": 0.30813907232078924,
+          "scenario_net_violations_per_1000": -12.102619522111057
+        },
+        {
+          "budget": 0.1,
+          "selected": 1324,
+          "oob": 152,
+          "precision": 0.1148036253776435,
+          "recall": 0.10446735395189004,
+          "violations": 430,
+          "rest_visits": 11907,
+          "rest_oob": 1303,
+          "rest_violations": 3655,
+          "violation_rate": 0.324773413897281,
+          "rest_violation_rate": 0.3069622910892752,
+          "scenario_net_violations_per_1000": -17.811122808005784
+        },
+        {
+          "budget": 0.2,
+          "selected": 2647,
+          "oob": 334,
+          "precision": 0.12618058179070646,
+          "recall": 0.22955326460481099,
+          "violations": 859,
+          "rest_visits": 10584,
+          "rest_oob": 1121,
+          "rest_violations": 3226,
+          "violation_rate": 0.3245183226293918,
+          "rest_violation_rate": 0.3047996976568405,
+          "scenario_net_violations_per_1000": -19.71862497255128
+        }
+      ],
+      "confusion_top10": {
+        "tp": 152,
+        "fp": 1172,
+        "fn": 1303,
+        "tn": 10604
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "logistic_history",
+      "subset": "exclude_cross_switch_links",
+      "visits": 88033,
+      "oob": 15308,
+      "violations": 17578,
+      "base_rate": 0.173889336953188,
+      "roc_auc": 0.7834539623343502,
+      "average_precision": 0.46678582321566464,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4402,
+          "oob": 2804,
+          "precision": 0.6369831894593366,
+          "recall": 0.18317219754376796,
+          "violations": 212,
+          "rest_visits": 83631,
+          "rest_oob": 12504,
+          "rest_violations": 17366,
+          "violation_rate": 0.0481599273057701,
+          "rest_violation_rate": 0.20765027322404372,
+          "scenario_net_violations_per_1000": 159.49034591827362
+        },
+        {
+          "budget": 0.1,
+          "selected": 8804,
+          "oob": 5039,
+          "precision": 0.5723534756928669,
+          "recall": 0.329174287954011,
+          "violations": 577,
+          "rest_visits": 79229,
+          "rest_oob": 10269,
+          "rest_violations": 17001,
+          "violation_rate": 0.06553839164016356,
+          "rest_violation_rate": 0.21458051975917908,
+          "scenario_net_violations_per_1000": 149.0421281190155
+        },
+        {
+          "budget": 0.2,
+          "selected": 17607,
+          "oob": 8049,
+          "precision": 0.4571477253365139,
+          "recall": 0.525803501437157,
+          "violations": 1694,
+          "rest_visits": 70426,
+          "rest_oob": 7259,
+          "rest_violations": 15884,
+          "violation_rate": 0.09621173396944398,
+          "rest_violation_rate": 0.22554170334819526,
+          "scenario_net_violations_per_1000": 129.3299693787513
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5039,
+        "fp": 3765,
+        "fn": 10269,
+        "tn": 68960
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_history",
+      "subset": "one_per_business_timestamp",
+      "visits": 51807,
+      "oob": 11239,
+      "violations": 9578,
+      "base_rate": 0.216939795780493,
+      "roc_auc": 0.7872284222023948,
+      "average_precision": 0.508328351843542,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2591,
+          "oob": 1677,
+          "precision": 0.6472404477035893,
+          "recall": 0.14921256339531988,
+          "violations": 122,
+          "rest_visits": 49216,
+          "rest_oob": 9562,
+          "rest_violations": 9456,
+          "violation_rate": 0.047086067155538404,
+          "rest_violation_rate": 0.1921326397919376,
+          "scenario_net_violations_per_1000": 145.0465726363992
+        },
+        {
+          "budget": 0.1,
+          "selected": 5181,
+          "oob": 3128,
+          "precision": 0.6037444508782088,
+          "recall": 0.27831657620784767,
+          "violations": 272,
+          "rest_visits": 46626,
+          "rest_oob": 8111,
+          "rest_violations": 9306,
+          "violation_rate": 0.052499517467670336,
+          "rest_violation_rate": 0.19958821258525286,
+          "scenario_net_violations_per_1000": 147.08869511758252
+        },
+        {
+          "budget": 0.2,
+          "selected": 10362,
+          "oob": 5544,
+          "precision": 0.535031847133758,
+          "recall": 0.4932823204911469,
+          "violations": 741,
+          "rest_visits": 41445,
+          "rest_oob": 5695,
+          "rest_violations": 8837,
+          "violation_rate": 0.07151129125651419,
+          "rest_violation_rate": 0.21322234286403668,
+          "scenario_net_violations_per_1000": 141.7110516075225
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3128,
+        "fp": 2053,
+        "fn": 8111,
+        "tn": 38515
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_history",
+      "subset": "has_prior_history",
+      "visits": 75514,
+      "oob": 13968,
+      "violations": 13635,
+      "base_rate": 0.18497232301295125,
+      "roc_auc": 0.8077865429089461,
+      "average_precision": 0.49742742279797736,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3776,
+          "oob": 2430,
+          "precision": 0.6435381355932204,
+          "recall": 0.17396907216494845,
+          "violations": 185,
+          "rest_visits": 71738,
+          "rest_oob": 11538,
+          "rest_violations": 13450,
+          "violation_rate": 0.04899364406779661,
+          "rest_violation_rate": 0.18748780283810532,
+          "scenario_net_violations_per_1000": 138.4941587703087
+        },
+        {
+          "budget": 0.1,
+          "selected": 7552,
+          "oob": 4458,
+          "precision": 0.5903072033898306,
+          "recall": 0.31915807560137455,
+          "violations": 466,
+          "rest_visits": 67962,
+          "rest_oob": 9510,
+          "rest_violations": 13169,
+          "violation_rate": 0.06170550847457627,
+          "rest_violation_rate": 0.1937700479679821,
+          "scenario_net_violations_per_1000": 132.06453949340585
+        },
+        {
+          "budget": 0.2,
+          "selected": 15103,
+          "oob": 7420,
+          "precision": 0.49129312057207175,
+          "recall": 0.5312142038946163,
+          "violations": 1349,
+          "rest_visits": 60411,
+          "rest_oob": 6548,
+          "rest_violations": 12286,
+          "violation_rate": 0.08932000264848043,
+          "rest_violation_rate": 0.20337355779576566,
+          "scenario_net_violations_per_1000": 114.05355514728522
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4458,
+        "fp": 3094,
+        "fn": 9510,
+        "tn": 58452
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_history",
+      "subset": "cold_start",
+      "visits": 13231,
+      "oob": 1455,
+      "violations": 4085,
+      "base_rate": 0.10996901216839242,
+      "roc_auc": 0.48940080237748396,
+      "average_precision": 0.10725988403002926,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 662,
+          "oob": 55,
+          "precision": 0.08308157099697885,
+          "recall": 0.037800687285223365,
+          "violations": 198,
+          "rest_visits": 12569,
+          "rest_oob": 1400,
+          "rest_violations": 3887,
+          "violation_rate": 0.2990936555891239,
+          "rest_violation_rate": 0.3092529238602912,
+          "scenario_net_violations_per_1000": 10.15926827116731
+        },
+        {
+          "budget": 0.1,
+          "selected": 1324,
+          "oob": 111,
+          "precision": 0.08383685800604229,
+          "recall": 0.07628865979381444,
+          "violations": 380,
+          "rest_visits": 11907,
+          "rest_oob": 1344,
+          "rest_violations": 3705,
+          "violation_rate": 0.28700906344410876,
+          "rest_violation_rate": 0.31116150163769213,
+          "scenario_net_violations_per_1000": 24.15243819358337
+        },
+        {
+          "budget": 0.2,
+          "selected": 2647,
+          "oob": 283,
+          "precision": 0.10691348696637704,
+          "recall": 0.19450171821305842,
+          "violations": 767,
+          "rest_visits": 10584,
+          "rest_oob": 1172,
+          "rest_violations": 3318,
+          "violation_rate": 0.28976199471099356,
+          "rest_violation_rate": 0.3134920634920635,
+          "scenario_net_violations_per_1000": 23.730068781069924
+        }
+      ],
+      "confusion_top10": {
+        "tp": 111,
+        "fp": 1213,
+        "fn": 1344,
+        "tn": 10563
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_history",
+      "subset": "exclude_cross_switch_links",
+      "visits": 88033,
+      "oob": 15308,
+      "violations": 17578,
+      "base_rate": 0.173889336953188,
+      "roc_auc": 0.7919518752027241,
+      "average_precision": 0.47356243019507677,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4402,
+          "oob": 2794,
+          "precision": 0.6347114947751022,
+          "recall": 0.18251894434282728,
+          "violations": 226,
+          "rest_visits": 83631,
+          "rest_oob": 12514,
+          "rest_violations": 17352,
+          "violation_rate": 0.05134029986369832,
+          "rest_violation_rate": 0.20748287118413028,
+          "scenario_net_violations_per_1000": 156.14257132043195
+        },
+        {
+          "budget": 0.1,
+          "selected": 8804,
+          "oob": 5084,
+          "precision": 0.5774647887323944,
+          "recall": 0.3321139273582441,
+          "violations": 575,
+          "rest_visits": 79229,
+          "rest_oob": 10224,
+          "rest_violations": 17003,
+          "violation_rate": 0.06531122217174012,
+          "rest_violation_rate": 0.21460576304131063,
+          "scenario_net_violations_per_1000": 149.2945408695705
+        },
+        {
+          "budget": 0.2,
+          "selected": 17607,
+          "oob": 8119,
+          "precision": 0.46112341682285457,
+          "recall": 0.5303762738437419,
+          "violations": 1752,
+          "rest_visits": 70426,
+          "rest_oob": 7189,
+          "rest_violations": 15826,
+          "violation_rate": 0.09950587834384052,
+          "rest_violation_rate": 0.22471814386732172,
+          "scenario_net_violations_per_1000": 125.2122655234812
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5084,
+        "fp": 3720,
+        "fn": 10224,
+        "tn": 69005
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_planned_type",
+      "subset": "one_per_business_timestamp",
+      "visits": 51807,
+      "oob": 11239,
+      "violations": 9578,
+      "base_rate": 0.216939795780493,
+      "roc_auc": 0.814068259235626,
+      "average_precision": 0.5429683778054689,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 2591,
+          "oob": 1802,
+          "precision": 0.6954843689695098,
+          "recall": 0.16033454933712965,
+          "violations": 106,
+          "rest_visits": 49216,
+          "rest_oob": 9437,
+          "rest_violations": 9472,
+          "violation_rate": 0.04091084523350058,
+          "rest_violation_rate": 0.19245773732119636,
+          "scenario_net_violations_per_1000": 151.5468920876958
+        },
+        {
+          "budget": 0.1,
+          "selected": 5181,
+          "oob": 3260,
+          "precision": 0.6292221578845782,
+          "recall": 0.2900613933623988,
+          "violations": 279,
+          "rest_visits": 46626,
+          "rest_oob": 7979,
+          "rest_violations": 9299,
+          "violation_rate": 0.05385060799073538,
+          "rest_violation_rate": 0.19943808175695962,
+          "scenario_net_violations_per_1000": 145.58747376622424
+        },
+        {
+          "budget": 0.2,
+          "selected": 10362,
+          "oob": 5697,
+          "precision": 0.5497973364215403,
+          "recall": 0.506895631283922,
+          "violations": 782,
+          "rest_visits": 41445,
+          "rest_oob": 5542,
+          "rest_violations": 8796,
+          "violation_rate": 0.0754680563597761,
+          "rest_violation_rate": 0.212233079985523,
+          "scenario_net_violations_per_1000": 136.7650236257469
+        }
+      ],
+      "confusion_top10": {
+        "tp": 3260,
+        "fp": 1921,
+        "fn": 7979,
+        "tn": 38647
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_planned_type",
+      "subset": "has_prior_history",
+      "visits": 75514,
+      "oob": 13968,
+      "violations": 13635,
+      "base_rate": 0.18497232301295125,
+      "roc_auc": 0.8240513047979945,
+      "average_precision": 0.5249514343506826,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 3776,
+          "oob": 2575,
+          "precision": 0.6819385593220338,
+          "recall": 0.1843499427262314,
+          "violations": 188,
+          "rest_visits": 71738,
+          "rest_oob": 11393,
+          "rest_violations": 13447,
+          "violation_rate": 0.04978813559322034,
+          "rest_violation_rate": 0.1874459839973236,
+          "scenario_net_violations_per_1000": 137.65784840410325
+        },
+        {
+          "budget": 0.1,
+          "selected": 7552,
+          "oob": 4609,
+          "precision": 0.610301906779661,
+          "recall": 0.3299684994272623,
+          "violations": 488,
+          "rest_visits": 67962,
+          "rest_oob": 9359,
+          "rest_violations": 13147,
+          "violation_rate": 0.0646186440677966,
+          "rest_violation_rate": 0.19344633765928018,
+          "scenario_net_violations_per_1000": 128.82769359148358
+        },
+        {
+          "budget": 0.2,
+          "selected": 15103,
+          "oob": 7649,
+          "precision": 0.50645567105873,
+          "recall": 0.5476088201603666,
+          "violations": 1442,
+          "rest_visits": 60411,
+          "rest_oob": 6319,
+          "rest_violations": 12193,
+          "violation_rate": 0.09547771965834602,
+          "rest_violation_rate": 0.20183410306070088,
+          "scenario_net_violations_per_1000": 106.35638340235485
+        }
+      ],
+      "confusion_top10": {
+        "tp": 4609,
+        "fp": 2943,
+        "fn": 9359,
+        "tn": 58603
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_planned_type",
+      "subset": "cold_start",
+      "visits": 13231,
+      "oob": 1455,
+      "violations": 4085,
+      "base_rate": 0.10996901216839242,
+      "roc_auc": 0.6496613182616165,
+      "average_precision": 0.19282466761514316,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 662,
+          "oob": 190,
+          "precision": 0.28700906344410876,
+          "recall": 0.13058419243986255,
+          "violations": 147,
+          "rest_visits": 12569,
+          "rest_oob": 1265,
+          "rest_violations": 3938,
+          "violation_rate": 0.22205438066465258,
+          "rest_violation_rate": 0.3133105258970483,
+          "scenario_net_violations_per_1000": 91.2561452323957
+        },
+        {
+          "budget": 0.1,
+          "selected": 1324,
+          "oob": 376,
+          "precision": 0.283987915407855,
+          "recall": 0.2584192439862543,
+          "violations": 390,
+          "rest_visits": 11907,
+          "rest_oob": 1079,
+          "rest_violations": 3695,
+          "violation_rate": 0.2945619335347432,
+          "rest_violation_rate": 0.3103216595280087,
+          "scenario_net_violations_per_1000": 15.759725993265528
+        },
+        {
+          "budget": 0.2,
+          "selected": 2647,
+          "oob": 505,
+          "precision": 0.19078201737816397,
+          "recall": 0.3470790378006873,
+          "violations": 879,
+          "rest_visits": 10584,
+          "rest_oob": 950,
+          "rest_violations": 3206,
+          "violation_rate": 0.3320740460899131,
+          "rest_violation_rate": 0.3029100529100529,
+          "scenario_net_violations_per_1000": -29.16399317986018
+        }
+      ],
+      "confusion_top10": {
+        "tp": 376,
+        "fp": 948,
+        "fn": 1079,
+        "tn": 10828
+      }
+    },
+    {
+      "era": "live",
+      "ranker": "lightgbm_planned_type",
+      "subset": "exclude_cross_switch_links",
+      "visits": 88033,
+      "oob": 15308,
+      "violations": 17578,
+      "base_rate": 0.173889336953188,
+      "roc_auc": 0.815798901492651,
+      "average_precision": 0.5038771533384071,
+      "topk": [
+        {
+          "budget": 0.05,
+          "selected": 4402,
+          "oob": 2939,
+          "precision": 0.6676510676965016,
+          "recall": 0.1919911157564672,
+          "violations": 223,
+          "rest_visits": 83631,
+          "rest_oob": 12369,
+          "rest_violations": 17355,
+          "violation_rate": 0.050658791458427985,
+          "rest_violation_rate": 0.207518743049826,
+          "scenario_net_violations_per_1000": 156.85995159139804
+        },
+        {
+          "budget": 0.1,
+          "selected": 8804,
+          "oob": 5212,
+          "precision": 0.5920036347114948,
+          "recall": 0.3404755683302848,
+          "violations": 605,
+          "rest_visits": 79229,
+          "rest_oob": 10096,
+          "rest_violations": 16973,
+          "violation_rate": 0.06871876419809178,
+          "rest_violation_rate": 0.21422711380933748,
+          "scenario_net_violations_per_1000": 145.5083496112457
+        },
+        {
+          "budget": 0.2,
+          "selected": 17607,
+          "oob": 8408,
+          "precision": 0.47753734310217527,
+          "recall": 0.5492552913509277,
+          "violations": 1908,
+          "rest_visits": 70426,
+          "rest_oob": 6900,
+          "rest_violations": 15670,
+          "violation_rate": 0.10836599079911399,
+          "rest_violation_rate": 0.2225030528497998,
+          "scenario_net_violations_per_1000": 114.1370620506858
+        }
+      ],
+      "confusion_top10": {
+        "tp": 5212,
+        "fp": 3592,
+        "fn": 10096,
+        "tn": 69133
+      }
+    }
+  ],
+  "timings_seconds": {
+    "archive": 7.72,
+    "live": 8.11
+  },
+  "importance": {
+    "gain": [
+      {
+        "feature": "numeric__months_since_last_positive",
+        "gain": 62314.899580955505
+      },
+      {
+        "feature": "numeric__prior_visits",
+        "gain": 8683.034760713577
+      },
+      {
+        "feature": "numeric__prior_oob_unresolved",
+        "gain": 8192.90019106865
+      },
+      {
+        "feature": "numeric__prior_violations",
+        "gain": 5883.339715838432
+      },
+      {
+        "feature": "numeric__prior_oob",
+        "gain": 1627.5477772951126
+      },
+      {
+        "feature": "categorical__month_8",
+        "gain": 856.7872681617737
+      },
+      {
+        "feature": "categorical__month_9",
+        "gain": 744.219386100769
+      },
+      {
+        "feature": "categorical__industry_group_tobacco_vape_cannabis",
+        "gain": 698.6506533622742
+      },
+      {
+        "feature": "categorical__borough_Brooklyn",
+        "gain": 614.8140740394592
+      },
+      {
+        "feature": "categorical__borough_Manhattan",
+        "gain": 602.9792881011963
+      },
+      {
+        "feature": "categorical__borough_Bronx",
+        "gain": 597.9981182813644
+      },
+      {
+        "feature": "categorical__industry_group_food_grocery",
+        "gain": 561.2330677509308
+      },
+      {
+        "feature": "categorical__month_7",
+        "gain": 498.3002687692642
+      },
+      {
+        "feature": "categorical__borough_Queens",
+        "gain": 486.23456025123596
+      },
+      {
+        "feature": "categorical__industry_group_auto_fuel_parking",
+        "gain": 476.45773899555206
+      },
+      {
+        "feature": "categorical__month_1",
+        "gain": 366.1914120912552
+      },
+      {
+        "feature": "categorical__month_6",
+        "gain": 339.7614278793335
+      },
+      {
+        "feature": "categorical__borough_Staten Island",
+        "gain": 290.42824268341064
+      },
+      {
+        "feature": "categorical__month_5",
+        "gain": 281.20728969573975
+      },
+      {
+        "feature": "categorical__month_4",
+        "gain": 275.70497131347656
+      },
+      {
+        "feature": "categorical__month_2",
+        "gain": 269.77683997154236
+      },
+      {
+        "feature": "categorical__month_3",
+        "gain": 268.6233811378479
+      },
+      {
+        "feature": "numeric__chain_flag",
+        "gain": 268.23350048065186
+      },
+      {
+        "feature": "categorical__industry_group_general_retail",
+        "gain": 211.8868498802185
+      },
+      {
+        "feature": "categorical__industry_group_personal_services",
+        "gain": 208.0212697982788
+      },
+      {
+        "feature": "categorical__industry_group_secondhand_pawn",
+        "gain": 166.93795132637024
+      },
+      {
+        "feature": "numeric__has_prior_positive",
+        "gain": 11.464300155639648
+      },
+      {
+        "feature": "numeric__missingindicator_months_since_last_positive",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_UNKNOWN",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_entertainment",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_missing",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_other",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_product_rule_checks",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_wholesale_industrial",
+        "gain": 0.0
+      },
+      {
+        "feature": "categorical__borough_UNKNOWN",
+        "gain": 0.0
+      }
+    ],
+    "shap_mean_absolute": [
+      {
+        "feature": "numeric__months_since_last_positive",
+        "mean_absolute_shap": 0.9125581520964565
+      },
+      {
+        "feature": "numeric__prior_visits",
+        "mean_absolute_shap": 0.4555063587956664
+      },
+      {
+        "feature": "numeric__prior_violations",
+        "mean_absolute_shap": 0.23934075267233584
+      },
+      {
+        "feature": "numeric__prior_oob_unresolved",
+        "mean_absolute_shap": 0.07468003476123451
+      },
+      {
+        "feature": "numeric__prior_oob",
+        "mean_absolute_shap": 0.05007750659955819
+      },
+      {
+        "feature": "categorical__industry_group_tobacco_vape_cannabis",
+        "mean_absolute_shap": 0.04720776908665568
+      },
+      {
+        "feature": "categorical__month_9",
+        "mean_absolute_shap": 0.039983216500485946
+      },
+      {
+        "feature": "categorical__industry_group_auto_fuel_parking",
+        "mean_absolute_shap": 0.038986028102932536
+      },
+      {
+        "feature": "categorical__borough_Bronx",
+        "mean_absolute_shap": 0.034875506923587235
+      },
+      {
+        "feature": "categorical__month_6",
+        "mean_absolute_shap": 0.03435627071054595
+      },
+      {
+        "feature": "categorical__month_5",
+        "mean_absolute_shap": 0.027486889333300783
+      },
+      {
+        "feature": "categorical__month_1",
+        "mean_absolute_shap": 0.02065769428001928
+      },
+      {
+        "feature": "categorical__month_7",
+        "mean_absolute_shap": 0.02056640672612203
+      },
+      {
+        "feature": "categorical__month_8",
+        "mean_absolute_shap": 0.01923792733684285
+      },
+      {
+        "feature": "categorical__industry_group_personal_services",
+        "mean_absolute_shap": 0.017954178922928027
+      },
+      {
+        "feature": "categorical__borough_Manhattan",
+        "mean_absolute_shap": 0.017068185288701822
+      },
+      {
+        "feature": "categorical__borough_Queens",
+        "mean_absolute_shap": 0.014710258109368301
+      },
+      {
+        "feature": "categorical__industry_group_food_grocery",
+        "mean_absolute_shap": 0.012393317717249679
+      },
+      {
+        "feature": "numeric__chain_flag",
+        "mean_absolute_shap": 0.011304562581498272
+      },
+      {
+        "feature": "categorical__industry_group_general_retail",
+        "mean_absolute_shap": 0.009407787798603566
+      },
+      {
+        "feature": "categorical__borough_Brooklyn",
+        "mean_absolute_shap": 0.008520473968652026
+      },
+      {
+        "feature": "categorical__month_3",
+        "mean_absolute_shap": 0.008237968422994284
+      },
+      {
+        "feature": "categorical__month_4",
+        "mean_absolute_shap": 0.006685436806487451
+      },
+      {
+        "feature": "categorical__borough_Staten Island",
+        "mean_absolute_shap": 0.005128924700851857
+      },
+      {
+        "feature": "categorical__month_2",
+        "mean_absolute_shap": 0.005006414509439874
+      },
+      {
+        "feature": "categorical__industry_group_secondhand_pawn",
+        "mean_absolute_shap": 0.002466946415597623
+      },
+      {
+        "feature": "numeric__has_prior_positive",
+        "mean_absolute_shap": 0.00036799490686322467
+      },
+      {
+        "feature": "numeric__missingindicator_months_since_last_positive",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_UNKNOWN",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_entertainment",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_missing",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_other",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_product_rule_checks",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__industry_group_wholesale_industrial",
+        "mean_absolute_shap": 0.0
+      },
+      {
+        "feature": "categorical__borough_UNKNOWN",
+        "mean_absolute_shap": 0.0
+      }
+    ],
+    "explanation_method": "SHAP TreeExplainer; 500 seeded held-out records; descriptive only"
+  }
+}

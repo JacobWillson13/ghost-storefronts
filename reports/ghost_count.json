@@ -1,0 +1,1759 @@
+{
+  "snapshot_date": "2026-08-23",
+  "exclusive_as_of": "2026-08-24T00:00:00",
+  "population": "Positive observation since 2023-01-01 and no unresolved OOB",
+  "eligible_businesses": 43447,
+  "expected_oob": 5722.235854714443,
+  "bootstrap_ci95": [
+    5443.295313029659,
+    5985.745940550229
+  ],
+  "bootstrap_method": "500 business-cluster resamples of Oct-Dec 2024 calibration rows; refit Platt calibrator only, freeze base model and snapshot population. Calibration uncertainty only; excludes base-model fitting, population selection, stale identities and future drift.",
+  "probability_min_mean_max": [
+    0.004539997521745873,
+    0.13170612135968982,
+    0.5872588863403908
+  ],
+  "sensitivities": [
+    {
+      "variant": "positive_since_2023_primary",
+      "businesses": 43447,
+      "expected_oob": 5722.235854714443
+    },
+    {
+      "variant": "positive_since_2023_uncalibrated",
+      "businesses": 43447,
+      "expected_oob": 4771.692884774211
+    },
+    {
+      "variant": "full_history_calibrated_sensitivity",
+      "businesses": 132188,
+      "expected_oob": 50732.420365728954
+    },
+    {
+      "variant": "positive_since_2023_refit_without_chain_flag",
+      "businesses": 43447,
+      "expected_oob": 5778.316098653304
+    }
+  ],
+  "by_industry": [
+    {
+      "industry_group": "general_retail",
+      "businesses": 13098,
+      "expected_oob": 1996.6399487919484,
+      "mean_probability": 0.15243853632554194
+    },
+    {
+      "industry_group": "personal_services",
+      "businesses": 9361,
+      "expected_oob": 1468.9655252937503,
+      "mean_probability": 0.15692399586515868
+    },
+    {
+      "industry_group": "food_grocery",
+      "businesses": 8695,
+      "expected_oob": 840.3033449363992,
+      "mean_probability": 0.09664213282764798
+    },
+    {
+      "industry_group": "tobacco_vape_cannabis",
+      "businesses": 6247,
+      "expected_oob": 795.9882444146276,
+      "mean_probability": 0.12741928036091366
+    },
+    {
+      "industry_group": "secondhand_pawn",
+      "businesses": 2292,
+      "expected_oob": 285.0246876875391,
+      "mean_probability": 0.12435632098060169
+    },
+    {
+      "industry_group": "auto_fuel_parking",
+      "businesses": 2709,
+      "expected_oob": 189.5145692560819,
+      "mean_probability": 0.0699573899062687
+    },
+    {
+      "industry_group": "lodging",
+      "businesses": 747,
+      "expected_oob": 98.45687342702065,
+      "mean_probability": 0.1318030434096662
+    },
+    {
+      "industry_group": "other",
+      "businesses": 199,
+      "expected_oob": 32.88505632136433,
+      "mean_probability": 0.16525153930333836
+    },
+    {
+      "industry_group": "wholesale_industrial",
+      "businesses": 67,
+      "expected_oob": 9.393932668843371,
+      "mean_probability": 0.14020795028124436
+    },
+    {
+      "industry_group": "entertainment",
+      "businesses": 22,
+      "expected_oob": 2.994319037349701,
+      "mean_probability": 0.1361054107886228
+    },
+    {
+      "industry_group": "product_rule_checks",
+      "businesses": 10,
+      "expected_oob": 2.069352879519209,
+      "mean_probability": 0.2069352879519209
+    }
+  ],
+  "by_nta": [
+    {
+      "nta2020": "MN0502",
+      "nta_name": "Midtown-Times Square",
+      "businesses": 1116,
+      "expected_oob": 145.5122419311847,
+      "mean_probability": 0.1303873135584092
+    },
+    {
+      "nta2020": "MN0501",
+      "nta_name": "Midtown South-Flatiron-Union Square",
+      "businesses": 646,
+      "expected_oob": 91.51550844370132,
+      "mean_probability": 0.14166487375185963
+    },
+    {
+      "nta2020": "QN0707",
+      "nta_name": "Flushing-Willets Point",
+      "businesses": 682,
+      "expected_oob": 86.02140153440996,
+      "mean_probability": 0.12613108729385625
+    },
+    {
+      "nta2020": "QN1201",
+      "nta_name": "Jamaica",
+      "businesses": 680,
+      "expected_oob": 84.92359838614342,
+      "mean_probability": 0.12488764468550503
+    },
+    {
+      "nta2020": "MN0201",
+      "nta_name": "SoHo-Little Italy-Hudson Square",
+      "businesses": 650,
+      "expected_oob": 82.66496878658411,
+      "mean_probability": 0.12717687505628325
+    },
+    {
+      "nta2020": "QN0301",
+      "nta_name": "Jackson Heights",
+      "businesses": 609,
+      "expected_oob": 81.11891281737428,
+      "mean_probability": 0.13320018525020408
+    },
+    {
+      "nta2020": "BK1001",
+      "nta_name": "Bay Ridge",
+      "businesses": 484,
+      "expected_oob": 76.15462980498397,
+      "mean_probability": 0.15734427645657845
+    },
+    {
+      "nta2020": "QN0401",
+      "nta_name": "Elmhurst",
+      "businesses": 568,
+      "expected_oob": 73.47977857971887,
+      "mean_probability": 0.12936580735866
+    },
+    {
+      "nta2020": "MN0802",
+      "nta_name": "Upper East Side-Carnegie Hill",
+      "businesses": 563,
+      "expected_oob": 69.98346838611937,
+      "mean_probability": 0.12430456196468805
+    },
+    {
+      "nta2020": "MN0401",
+      "nta_name": "Chelsea-Hudson Yards",
+      "businesses": 516,
+      "expected_oob": 68.10729464901777,
+      "mean_probability": 0.13199088110274762
+    },
+    {
+      "nta2020": "QN1001",
+      "nta_name": "South Ozone Park",
+      "businesses": 478,
+      "expected_oob": 67.24868460997729,
+      "mean_probability": 0.14068762470706545
+    },
+    {
+      "nta2020": "BK1101",
+      "nta_name": "Bensonhurst",
+      "businesses": 431,
+      "expected_oob": 65.10951745122149,
+      "mean_probability": 0.15106616578009627
+    },
+    {
+      "nta2020": "BK0702",
+      "nta_name": "Sunset Park (West)",
+      "businesses": 461,
+      "expected_oob": 63.7228376094838,
+      "mean_probability": 0.13822741346959608
+    },
+    {
+      "nta2020": "MN0303",
+      "nta_name": "East Village",
+      "businesses": 440,
+      "expected_oob": 60.40468766636452,
+      "mean_probability": 0.13728338105991936
+    },
+    {
+      "nta2020": "BK0703",
+      "nta_name": "Sunset Park (Central)",
+      "businesses": 399,
+      "expected_oob": 57.823864747009154,
+      "mean_probability": 0.1449219667844841
+    },
+    {
+      "nta2020": "BK0102",
+      "nta_name": "Williamsburg",
+      "businesses": 447,
+      "expected_oob": 57.26951627133559,
+      "mean_probability": 0.12811972320209306
+    },
+    {
+      "nta2020": "BK0104",
+      "nta_name": "East Williamsburg",
+      "businesses": 396,
+      "expected_oob": 56.200101748306736,
+      "mean_probability": 0.14191944885936045
+    },
+    {
+      "nta2020": "BK0401",
+      "nta_name": "Bushwick (West)",
+      "businesses": 403,
+      "expected_oob": 56.028693691779424,
+      "mean_probability": 0.1390290166049117
+    },
+    {
+      "nta2020": "MN0101",
+      "nta_name": "Financial District-Battery Park City",
+      "businesses": 406,
+      "expected_oob": 55.42773726977973,
+      "mean_probability": 0.1365215203689156
+    },
+    {
+      "nta2020": "MN1202",
+      "nta_name": "Washington Heights (North)",
+      "businesses": 410,
+      "expected_oob": 54.177650503620015,
+      "mean_probability": 0.13214061098443905
+    },
+    {
+      "nta2020": "QN0502",
+      "nta_name": "Ridgewood",
+      "businesses": 433,
+      "expected_oob": 53.31631008219527,
+      "mean_probability": 0.12313235584802604
+    },
+    {
+      "nta2020": "MN1102",
+      "nta_name": "East Harlem (North)",
+      "businesses": 401,
+      "expected_oob": 53.204686636305425,
+      "mean_probability": 0.1326800165493901
+    },
+    {
+      "nta2020": "BK0101",
+      "nta_name": "Greenpoint",
+      "businesses": 470,
+      "expected_oob": 52.571399651936254,
+      "mean_probability": 0.11185404181263033
+    },
+    {
+      "nta2020": "BK0301",
+      "nta_name": "Bedford-Stuyvesant (West)",
+      "businesses": 368,
+      "expected_oob": 52.27689217772824,
+      "mean_probability": 0.14205677222208762
+    },
+    {
+      "nta2020": "MN1201",
+      "nta_name": "Washington Heights (South)",
+      "businesses": 393,
+      "expected_oob": 51.82583579251577,
+      "mean_probability": 0.131872355706147
+    },
+    {
+      "nta2020": "MN0402",
+      "nta_name": "Hell's Kitchen",
+      "businesses": 416,
+      "expected_oob": 51.4715516471172,
+      "mean_probability": 0.12372969145941635
+    },
+    {
+      "nta2020": "BK0602",
+      "nta_name": "Park Slope",
+      "businesses": 349,
+      "expected_oob": 50.868388985474596,
+      "mean_probability": 0.14575469623345155
+    },
+    {
+      "nta2020": "MN0604",
+      "nta_name": "East Midtown-Turtle Bay",
+      "businesses": 419,
+      "expected_oob": 50.04985897902688,
+      "mean_probability": 0.11945073742011189
+    },
+    {
+      "nta2020": "MN0301",
+      "nta_name": "Chinatown-Two Bridges",
+      "businesses": 419,
+      "expected_oob": 50.00860278434502,
+      "mean_probability": 0.11935227394831747
+    },
+    {
+      "nta2020": "MN0702",
+      "nta_name": "Upper West Side (Central)",
+      "businesses": 375,
+      "expected_oob": 49.966209021258656,
+      "mean_probability": 0.13324322405668976
+    },
+    {
+      "nta2020": "MN0203",
+      "nta_name": "West Village",
+      "businesses": 364,
+      "expected_oob": 48.70852534632948,
+      "mean_probability": 0.13381463007233374
+    },
+    {
+      "nta2020": "QN0602",
+      "nta_name": "Forest Hills",
+      "businesses": 386,
+      "expected_oob": 48.11019139067355,
+      "mean_probability": 0.12463780153024236
+    },
+    {
+      "nta2020": "BK0302",
+      "nta_name": "Bedford-Stuyvesant (East)",
+      "businesses": 334,
+      "expected_oob": 47.14525840308432,
+      "mean_probability": 0.14115346827270756
+    },
+    {
+      "nta2020": "QN0303",
+      "nta_name": "North Corona",
+      "businesses": 334,
+      "expected_oob": 47.04994749699692,
+      "mean_probability": 0.1408681062784339
+    },
+    {
+      "nta2020": "QN0104",
+      "nta_name": "Astoria (East)-Woodside (North)",
+      "businesses": 349,
+      "expected_oob": 47.00407817601696,
+      "mean_probability": 0.13468217242411737
+    },
+    {
+      "nta2020": "BK0802",
+      "nta_name": "Crown Heights (North)",
+      "businesses": 332,
+      "expected_oob": 46.930522256545224,
+      "mean_probability": 0.1413569947486302
+    },
+    {
+      "nta2020": "UNMAPPED",
+      "nta_name": "UNMAPPED",
+      "businesses": 199,
+      "expected_oob": 46.88881849897122,
+      "mean_probability": 0.2356222035124182
+    },
+    {
+      "nta2020": "BK0202",
+      "nta_name": "Downtown Brooklyn-DUMBO-Boerum Hill",
+      "businesses": 350,
+      "expected_oob": 46.839986054548994,
+      "mean_probability": 0.1338285315844257
+    },
+    {
+      "nta2020": "MN0801",
+      "nta_name": "Upper East Side-Lenox Hill-Roosevelt Island",
+      "businesses": 379,
+      "expected_oob": 44.86657179648026,
+      "mean_probability": 0.11838145592738854
+    },
+    {
+      "nta2020": "QN0202",
+      "nta_name": "Sunnyside",
+      "businesses": 351,
+      "expected_oob": 42.618869068167236,
+      "mean_probability": 0.12142127939648785
+    },
+    {
+      "nta2020": "MN0202",
+      "nta_name": "Greenwich Village",
+      "businesses": 324,
+      "expected_oob": 42.42632546713861,
+      "mean_probability": 0.13094544897265004
+    },
+    {
+      "nta2020": "BK1602",
+      "nta_name": "Brownsville",
+      "businesses": 265,
+      "expected_oob": 42.28575766564186,
+      "mean_probability": 0.1595688968514787
+    },
+    {
+      "nta2020": "QN0203",
+      "nta_name": "Woodside",
+      "businesses": 315,
+      "expected_oob": 42.229215211291304,
+      "mean_probability": 0.13406100067076604
+    },
+    {
+      "nta2020": "BX0101",
+      "nta_name": "Mott Haven-Port Morris",
+      "businesses": 340,
+      "expected_oob": 42.20987404752713,
+      "mean_probability": 0.12414668837507979
+    },
+    {
+      "nta2020": "MN1002",
+      "nta_name": "Harlem (North)",
+      "businesses": 311,
+      "expected_oob": 42.04340517230796,
+      "mean_probability": 0.13518779798169764
+    },
+    {
+      "nta2020": "MN0302",
+      "nta_name": "Lower East Side",
+      "businesses": 315,
+      "expected_oob": 41.91800912941526,
+      "mean_probability": 0.13307304485528654
+    },
+    {
+      "nta2020": "BK1401",
+      "nta_name": "Flatbush",
+      "businesses": 274,
+      "expected_oob": 40.78894856445403,
+      "mean_probability": 0.14886477578267895
+    },
+    {
+      "nta2020": "QN0103",
+      "nta_name": "Astoria (Central)",
+      "businesses": 342,
+      "expected_oob": 40.04681348803367,
+      "mean_probability": 0.11709594587144348
+    },
+    {
+      "nta2020": "QN0402",
+      "nta_name": "Corona",
+      "businesses": 324,
+      "expected_oob": 39.70617639691754,
+      "mean_probability": 0.12254992715098006
+    },
+    {
+      "nta2020": "BX0503",
+      "nta_name": "Fordham Heights",
+      "businesses": 279,
+      "expected_oob": 38.82684771173534,
+      "mean_probability": 0.13916432871589726
+    },
+    {
+      "nta2020": "BX1201",
+      "nta_name": "Williamsbridge-Olinville",
+      "businesses": 283,
+      "expected_oob": 38.685805395871796,
+      "mean_probability": 0.13669895899601342
+    },
+    {
+      "nta2020": "BK0402",
+      "nta_name": "Bushwick (East)",
+      "businesses": 286,
+      "expected_oob": 38.15003101193458,
+      "mean_probability": 0.13339171682494608
+    },
+    {
+      "nta2020": "BK0601",
+      "nta_name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+      "businesses": 302,
+      "expected_oob": 38.01675597527359,
+      "mean_probability": 0.12588329793136951
+    },
+    {
+      "nta2020": "BX0901",
+      "nta_name": "Soundview-Bruckner-Bronx River",
+      "businesses": 314,
+      "expected_oob": 36.78197378664024,
+      "mean_probability": 0.11714004390649758
+    },
+    {
+      "nta2020": "MN0701",
+      "nta_name": "Upper West Side-Lincoln Square",
+      "businesses": 297,
+      "expected_oob": 36.26170570922621,
+      "mean_probability": 0.12209328521624987
+    },
+    {
+      "nta2020": "BX0401",
+      "nta_name": "Concourse-Concourse Village",
+      "businesses": 294,
+      "expected_oob": 36.07999689952303,
+      "mean_probability": 0.12272107788953412
+    },
+    {
+      "nta2020": "MN1001",
+      "nta_name": "Harlem (South)",
+      "businesses": 272,
+      "expected_oob": 35.74732435856807,
+      "mean_probability": 0.1314239866123826
+    },
+    {
+      "nta2020": "MN0803",
+      "nta_name": "Upper East Side-Yorkville",
+      "businesses": 321,
+      "expected_oob": 35.65912355545656,
+      "mean_probability": 0.11108761232229458
+    },
+    {
+      "nta2020": "BX0102",
+      "nta_name": "Melrose",
+      "businesses": 294,
+      "expected_oob": 35.19029230805565,
+      "mean_probability": 0.11969487179610766
+    },
+    {
+      "nta2020": "MN0102",
+      "nta_name": "Tribeca-Civic Center",
+      "businesses": 251,
+      "expected_oob": 34.72562592296271,
+      "mean_probability": 0.13834910726279964
+    },
+    {
+      "nta2020": "MN0603",
+      "nta_name": "Murray Hill-Kips Bay",
+      "businesses": 297,
+      "expected_oob": 34.50154137220037,
+      "mean_probability": 0.11616680596700461
+    },
+    {
+      "nta2020": "BK0501",
+      "nta_name": "Cypress Hills",
+      "businesses": 244,
+      "expected_oob": 34.253073689761926,
+      "mean_probability": 0.1403814495482046
+    },
+    {
+      "nta2020": "QN0902",
+      "nta_name": "Richmond Hill",
+      "businesses": 279,
+      "expected_oob": 34.13546943938195,
+      "mean_probability": 0.12234935282932599
+    },
+    {
+      "nta2020": "MN1101",
+      "nta_name": "East Harlem (South)",
+      "businesses": 283,
+      "expected_oob": 33.56735677314985,
+      "mean_probability": 0.118612568103003
+    },
+    {
+      "nta2020": "BK1701",
+      "nta_name": "East Flatbush-Erasmus",
+      "businesses": 225,
+      "expected_oob": 33.27913651422362,
+      "mean_probability": 0.14790727339654944
+    },
+    {
+      "nta2020": "BK1501",
+      "nta_name": "Gravesend (East)-Homecrest",
+      "businesses": 234,
+      "expected_oob": 33.01099102312642,
+      "mean_probability": 0.14107261120994197
+    },
+    {
+      "nta2020": "BK1202",
+      "nta_name": "Borough Park",
+      "businesses": 234,
+      "expected_oob": 32.156537732310056,
+      "mean_probability": 0.13742110142012845
+    },
+    {
+      "nta2020": "BX0701",
+      "nta_name": "University Heights (North)-Fordham",
+      "businesses": 210,
+      "expected_oob": 32.02016530317484,
+      "mean_probability": 0.15247697763416593
+    },
+    {
+      "nta2020": "BX0403",
+      "nta_name": "Mount Eden-Claremont (West)",
+      "businesses": 268,
+      "expected_oob": 31.999310364360728,
+      "mean_probability": 0.11940041180731614
+    },
+    {
+      "nta2020": "MN0903",
+      "nta_name": "Hamilton Heights-Sugar Hill",
+      "businesses": 224,
+      "expected_oob": 31.819301843342984,
+      "mean_probability": 0.14205045465778118
+    },
+    {
+      "nta2020": "BX1101",
+      "nta_name": "Pelham Parkway-Van Nest",
+      "businesses": 210,
+      "expected_oob": 30.507532618925207,
+      "mean_probability": 0.1452739648520248
+    },
+    {
+      "nta2020": "BK0901",
+      "nta_name": "Crown Heights (South)",
+      "businesses": 199,
+      "expected_oob": 30.458279999267617,
+      "mean_probability": 0.15305668341340511
+    },
+    {
+      "nta2020": "BK1303",
+      "nta_name": "Brighton Beach",
+      "businesses": 206,
+      "expected_oob": 30.452025544776433,
+      "mean_probability": 0.1478253667222157
+    },
+    {
+      "nta2020": "BX0202",
+      "nta_name": "Longwood",
+      "businesses": 253,
+      "expected_oob": 30.37416626459372,
+      "mean_probability": 0.12005599314068663
+    },
+    {
+      "nta2020": "MN1203",
+      "nta_name": "Inwood",
+      "businesses": 220,
+      "expected_oob": 30.36441771703556,
+      "mean_probability": 0.1380200805319798
+    },
+    {
+      "nta2020": "BK1103",
+      "nta_name": "Gravesend (West)",
+      "businesses": 232,
+      "expected_oob": 30.068853817091284,
+      "mean_probability": 0.1296071285219452
+    },
+    {
+      "nta2020": "BK0902",
+      "nta_name": "Prospect Lefferts Gardens-Wingate",
+      "businesses": 201,
+      "expected_oob": 29.661484649739382,
+      "mean_probability": 0.1475695753718377
+    },
+    {
+      "nta2020": "BK1803",
+      "nta_name": "Canarsie",
+      "businesses": 203,
+      "expected_oob": 29.617867021050852,
+      "mean_probability": 0.1459008227637973
+    },
+    {
+      "nta2020": "BX0603",
+      "nta_name": "Belmont",
+      "businesses": 255,
+      "expected_oob": 29.602156003567057,
+      "mean_probability": 0.11608688628849827
+    },
+    {
+      "nta2020": "BX0602",
+      "nta_name": "Tremont",
+      "businesses": 213,
+      "expected_oob": 29.07727445713185,
+      "mean_probability": 0.13651302562033732
+    },
+    {
+      "nta2020": "BK1503",
+      "nta_name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+      "businesses": 215,
+      "expected_oob": 28.748164918368584,
+      "mean_probability": 0.1337123949691562
+    },
+    {
+      "nta2020": "BK1801",
+      "nta_name": "Flatlands",
+      "businesses": 219,
+      "expected_oob": 28.52017498583925,
+      "mean_probability": 0.13022910952438013
+    },
+    {
+      "nta2020": "QN0101",
+      "nta_name": "Astoria (North)-Ditmars-Steinway",
+      "businesses": 238,
+      "expected_oob": 28.509349372569034,
+      "mean_probability": 0.11978718223768502
+    },
+    {
+      "nta2020": "QN0905",
+      "nta_name": "Woodhaven",
+      "businesses": 214,
+      "expected_oob": 27.963168057134002,
+      "mean_probability": 0.13066900961277572
+    },
+    {
+      "nta2020": "BK1002",
+      "nta_name": "Dyker Heights",
+      "businesses": 176,
+      "expected_oob": 27.425400423473434,
+      "mean_probability": 0.15582613876973542
+    },
+    {
+      "nta2020": "BX0502",
+      "nta_name": "Mount Hope",
+      "businesses": 231,
+      "expected_oob": 27.266955175091507,
+      "mean_probability": 0.11803876699173813
+    },
+    {
+      "nta2020": "BK1502",
+      "nta_name": "Madison",
+      "businesses": 190,
+      "expected_oob": 27.044097881663024,
+      "mean_probability": 0.14233735727191066
+    },
+    {
+      "nta2020": "BX1203",
+      "nta_name": "Wakefield-Woodlawn",
+      "businesses": 211,
+      "expected_oob": 26.919302379485398,
+      "mean_probability": 0.12757963213026255
+    },
+    {
+      "nta2020": "BX1202",
+      "nta_name": "Eastchester-Edenwald-Baychester",
+      "businesses": 200,
+      "expected_oob": 26.78731451245727,
+      "mean_probability": 0.13393657256228636
+    },
+    {
+      "nta2020": "BK1201",
+      "nta_name": "Sunset Park (East)-Borough Park (West)",
+      "businesses": 182,
+      "expected_oob": 26.69831030399159,
+      "mean_probability": 0.14669401265929446
+    },
+    {
+      "nta2020": "QN0105",
+      "nta_name": "Queensbridge-Ravenswood-Dutch Kills",
+      "businesses": 210,
+      "expected_oob": 26.659342857296004,
+      "mean_probability": 0.12694925170140955
+    },
+    {
+      "nta2020": "BK0503",
+      "nta_name": "East New York-New Lots",
+      "businesses": 207,
+      "expected_oob": 26.47020002332847,
+      "mean_probability": 0.1278753624315385
+    },
+    {
+      "nta2020": "QN1303",
+      "nta_name": "Queens Village",
+      "businesses": 212,
+      "expected_oob": 26.38608191146419,
+      "mean_probability": 0.12446265052577447
+    },
+    {
+      "nta2020": "MN0602",
+      "nta_name": "Gramercy",
+      "businesses": 203,
+      "expected_oob": 26.01034183933861,
+      "mean_probability": 0.12812976275536261
+    },
+    {
+      "nta2020": "BX0703",
+      "nta_name": "Norwood",
+      "businesses": 194,
+      "expected_oob": 25.852356164159108,
+      "mean_probability": 0.13325956785649024
+    },
+    {
+      "nta2020": "SI0106",
+      "nta_name": "Port Richmond",
+      "businesses": 195,
+      "expected_oob": 25.646083172309005,
+      "mean_probability": 0.13151837524261029
+    },
+    {
+      "nta2020": "QN0501",
+      "nta_name": "Maspeth",
+      "businesses": 207,
+      "expected_oob": 25.05885447747022,
+      "mean_probability": 0.12105726800710251
+    },
+    {
+      "nta2020": "BK0203",
+      "nta_name": "Fort Greene",
+      "businesses": 175,
+      "expected_oob": 23.441634437784124,
+      "mean_probability": 0.13395219678733786
+    },
+    {
+      "nta2020": "MN0703",
+      "nta_name": "Upper West Side-Manhattan Valley",
+      "businesses": 175,
+      "expected_oob": 23.285884182789534,
+      "mean_probability": 0.1330621953302259
+    },
+    {
+      "nta2020": "BK1703",
+      "nta_name": "East Flatbush-Rugby",
+      "businesses": 172,
+      "expected_oob": 23.151057851700447,
+      "mean_probability": 0.13459917355639794
+    },
+    {
+      "nta2020": "BK1402",
+      "nta_name": "Flatbush (West)-Ditmas Park-Parkville",
+      "businesses": 182,
+      "expected_oob": 22.500574166259685,
+      "mean_probability": 0.12362952838604223
+    },
+    {
+      "nta2020": "SI0202",
+      "nta_name": "New Dorp-Midland Beach",
+      "businesses": 156,
+      "expected_oob": 22.489925506854163,
+      "mean_probability": 0.14416618914650106
+    },
+    {
+      "nta2020": "BK0502",
+      "nta_name": "East New York (North)",
+      "businesses": 157,
+      "expected_oob": 22.481992691433987,
+      "mean_probability": 0.1431974056779235
+    },
+    {
+      "nta2020": "BK0505",
+      "nta_name": "East New York-City Line",
+      "businesses": 176,
+      "expected_oob": 21.634385907781805,
+      "mean_probability": 0.12292264720330572
+    },
+    {
+      "nta2020": "QN1101",
+      "nta_name": "Auburndale",
+      "businesses": 147,
+      "expected_oob": 21.426874483223905,
+      "mean_probability": 0.14576105090628508
+    },
+    {
+      "nta2020": "QN0704",
+      "nta_name": "Murray Hill-Broadway Flushing",
+      "businesses": 177,
+      "expected_oob": 21.20156434425258,
+      "mean_probability": 0.11978284940255696
+    },
+    {
+      "nta2020": "SI0204",
+      "nta_name": "New Springville-Willowbrook-Bulls Head-Travis",
+      "businesses": 164,
+      "expected_oob": 21.166279527097604,
+      "mean_probability": 0.12906268004327806
+    },
+    {
+      "nta2020": "BX1104",
+      "nta_name": "Allerton",
+      "businesses": 153,
+      "expected_oob": 21.074597802389633,
+      "mean_probability": 0.13774246929666425
+    },
+    {
+      "nta2020": "QN1205",
+      "nta_name": "St. Albans",
+      "businesses": 172,
+      "expected_oob": 20.719771209531338,
+      "mean_probability": 0.12046378610192639
+    },
+    {
+      "nta2020": "QN0503",
+      "nta_name": "Glendale",
+      "businesses": 155,
+      "expected_oob": 20.635928864369532,
+      "mean_probability": 0.13313502493141632
+    },
+    {
+      "nta2020": "QN1102",
+      "nta_name": "Bayside",
+      "businesses": 143,
+      "expected_oob": 20.58329837987727,
+      "mean_probability": 0.14393914950963127
+    },
+    {
+      "nta2020": "SI0201",
+      "nta_name": "Grasmere-Arrochar-South Beach-Dongan Hills",
+      "businesses": 139,
+      "expected_oob": 20.378159347461057,
+      "mean_probability": 0.14660546293137453
+    },
+    {
+      "nta2020": "SI0105",
+      "nta_name": "Westerleigh-Castleton Corners",
+      "businesses": 156,
+      "expected_oob": 20.37104739859569,
+      "mean_probability": 0.13058363717048518
+    },
+    {
+      "nta2020": "BX0702",
+      "nta_name": "Bedford Park",
+      "businesses": 170,
+      "expected_oob": 20.3384291031707,
+      "mean_probability": 0.11963781825394529
+    },
+    {
+      "nta2020": "BK1203",
+      "nta_name": "Kensington",
+      "businesses": 157,
+      "expected_oob": 20.315669608945175,
+      "mean_probability": 0.12939916948372723
+    },
+    {
+      "nta2020": "BK1704",
+      "nta_name": "East Flatbush-Remsen Village",
+      "businesses": 133,
+      "expected_oob": 20.280814776255447,
+      "mean_probability": 0.1524873291447778
+    },
+    {
+      "nta2020": "BK1403",
+      "nta_name": "Midwood",
+      "businesses": 140,
+      "expected_oob": 19.959199401728853,
+      "mean_probability": 0.14256571001234894
+    },
+    {
+      "nta2020": "SI0302",
+      "nta_name": "Great Kills-Eltingville",
+      "businesses": 165,
+      "expected_oob": 19.9449202133273,
+      "mean_probability": 0.12087830432319575
+    },
+    {
+      "nta2020": "BX0501",
+      "nta_name": "University Heights (South)-Morris Heights",
+      "businesses": 175,
+      "expected_oob": 19.391449978130527,
+      "mean_probability": 0.1108082855893173
+    },
+    {
+      "nta2020": "BX1001",
+      "nta_name": "Westchester Square",
+      "businesses": 153,
+      "expected_oob": 19.350517344629125,
+      "mean_probability": 0.12647396957273938
+    },
+    {
+      "nta2020": "BK0201",
+      "nta_name": "Brooklyn Heights",
+      "businesses": 136,
+      "expected_oob": 19.27334326619267,
+      "mean_probability": 0.14171575931024022
+    },
+    {
+      "nta2020": "BX0802",
+      "nta_name": "Kingsbridge-Marble Hill",
+      "businesses": 152,
+      "expected_oob": 18.952493144686006,
+      "mean_probability": 0.12468745489925004
+    },
+    {
+      "nta2020": "QN1203",
+      "nta_name": "Baisley Park",
+      "businesses": 143,
+      "expected_oob": 18.951716192891602,
+      "mean_probability": 0.13252948386637484
+    },
+    {
+      "nta2020": "QN1202",
+      "nta_name": "South Jamaica",
+      "businesses": 138,
+      "expected_oob": 18.601500134012134,
+      "mean_probability": 0.134793479231972
+    },
+    {
+      "nta2020": "QN0201",
+      "nta_name": "Long Island City-Hunters Point",
+      "businesses": 157,
+      "expected_oob": 18.396640293324452,
+      "mean_probability": 0.11717605282372262
+    },
+    {
+      "nta2020": "QN0601",
+      "nta_name": "Rego Park",
+      "businesses": 153,
+      "expected_oob": 18.28388340854573,
+      "mean_probability": 0.11950250593820738
+    },
+    {
+      "nta2020": "BK1302",
+      "nta_name": "Coney Island-Sea Gate",
+      "businesses": 134,
+      "expected_oob": 17.525315550618803,
+      "mean_probability": 0.13078593694491644
+    },
+    {
+      "nta2020": "BX0903",
+      "nta_name": "Castle Hill-Unionport",
+      "businesses": 142,
+      "expected_oob": 16.897586957523657,
+      "mean_probability": 0.1189970912501666
+    },
+    {
+      "nta2020": "QN1305",
+      "nta_name": "Laurelton",
+      "businesses": 110,
+      "expected_oob": 16.655404053209452,
+      "mean_probability": 0.15141276412008592
+    },
+    {
+      "nta2020": "BK1601",
+      "nta_name": "Ocean Hill",
+      "businesses": 112,
+      "expected_oob": 16.51117599757603,
+      "mean_probability": 0.14742121426407168
+    },
+    {
+      "nta2020": "QN1002",
+      "nta_name": "Ozone Park",
+      "businesses": 125,
+      "expected_oob": 16.506653623390324,
+      "mean_probability": 0.1320532289871226
+    },
+    {
+      "nta2020": "BX1102",
+      "nta_name": "Morris Park",
+      "businesses": 131,
+      "expected_oob": 16.049478835476062,
+      "mean_probability": 0.12251510561432108
+    },
+    {
+      "nta2020": "QN0701",
+      "nta_name": "College Point",
+      "businesses": 123,
+      "expected_oob": 16.00426391465556,
+      "mean_probability": 0.13011596678581755
+    },
+    {
+      "nta2020": "QN0904",
+      "nta_name": "Ozone Park (North)",
+      "businesses": 121,
+      "expected_oob": 15.793436903595198,
+      "mean_probability": 0.13052427193053884
+    },
+    {
+      "nta2020": "BX1002",
+      "nta_name": "Throgs Neck-Schuylerville",
+      "businesses": 140,
+      "expected_oob": 15.752251340491872,
+      "mean_probability": 0.11251608100351337
+    },
+    {
+      "nta2020": "SI0102",
+      "nta_name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
+      "businesses": 123,
+      "expected_oob": 15.751069377415714,
+      "mean_probability": 0.12805747461313588
+    },
+    {
+      "nta2020": "BK0801",
+      "nta_name": "Prospect Heights",
+      "businesses": 113,
+      "expected_oob": 15.48688807283983,
+      "mean_probability": 0.13705210683929053
+    },
+    {
+      "nta2020": "BK1204",
+      "nta_name": "Mapleton-Midwood (West)",
+      "businesses": 104,
+      "expected_oob": 15.36965391697338,
+      "mean_probability": 0.14778513381705174
+    },
+    {
+      "nta2020": "QN0903",
+      "nta_name": "South Richmond Hill",
+      "businesses": 111,
+      "expected_oob": 15.29926830450763,
+      "mean_probability": 0.13783124598655522
+    },
+    {
+      "nta2020": "QN0302",
+      "nta_name": "East Elmhurst",
+      "businesses": 126,
+      "expected_oob": 15.101938890411992,
+      "mean_probability": 0.11985665786041264
+    },
+    {
+      "nta2020": "BX1103",
+      "nta_name": "Pelham Gardens",
+      "businesses": 109,
+      "expected_oob": 15.001854395086717,
+      "mean_probability": 0.13763169169804326
+    },
+    {
+      "nta2020": "BX1003",
+      "nta_name": "Pelham Bay-Country Club-City Island",
+      "businesses": 121,
+      "expected_oob": 14.991264216674184,
+      "mean_probability": 0.12389474559234863
+    },
+    {
+      "nta2020": "SI0107",
+      "nta_name": "Mariner's Harbor-Arlington-Graniteville",
+      "businesses": 125,
+      "expected_oob": 14.982314820957138,
+      "mean_probability": 0.1198585185676571
+    },
+    {
+      "nta2020": "MN0901",
+      "nta_name": "Morningside Heights",
+      "businesses": 113,
+      "expected_oob": 14.97631711237423,
+      "mean_probability": 0.13253377975552416
+    },
+    {
+      "nta2020": "BX0904",
+      "nta_name": "Parkchester",
+      "businesses": 135,
+      "expected_oob": 14.911096994439598,
+      "mean_probability": 0.11045257032918221
+    },
+    {
+      "nta2020": "SI0104",
+      "nta_name": "West New Brighton-Silver Lake-Grymes Hill",
+      "businesses": 103,
+      "expected_oob": 14.756194105232147,
+      "mean_probability": 0.14326402043914707
+    },
+    {
+      "nta2020": "SI0305",
+      "nta_name": "Tottenville-Charleston",
+      "businesses": 113,
+      "expected_oob": 14.44885689107574,
+      "mean_probability": 0.12786599018651099
+    },
+    {
+      "nta2020": "BX0201",
+      "nta_name": "Hunts Point",
+      "businesses": 121,
+      "expected_oob": 14.336933960568528,
+      "mean_probability": 0.11848705752535973
+    },
+    {
+      "nta2020": "BX0303",
+      "nta_name": "Crotona Park East",
+      "businesses": 120,
+      "expected_oob": 14.328782829233209,
+      "mean_probability": 0.11940652357694341
+    },
+    {
+      "nta2020": "QN0801",
+      "nta_name": "Kew Gardens Hills",
+      "businesses": 98,
+      "expected_oob": 14.32229157782174,
+      "mean_probability": 0.14614583242675244
+    },
+    {
+      "nta2020": "QN1206",
+      "nta_name": "Hollis",
+      "businesses": 105,
+      "expected_oob": 14.246656913944955,
+      "mean_probability": 0.13568244679947578
+    },
+    {
+      "nta2020": "BK0204",
+      "nta_name": "Clinton Hill",
+      "businesses": 102,
+      "expected_oob": 13.967255556537623,
+      "mean_probability": 0.13693387800527082
+    },
+    {
+      "nta2020": "QN0802",
+      "nta_name": "Pomonok-Electchester-Hillcrest",
+      "businesses": 97,
+      "expected_oob": 13.715068670365381,
+      "mean_probability": 0.14139246051923074
+    },
+    {
+      "nta2020": "QN1401",
+      "nta_name": "Far Rockaway-Bayswater",
+      "businesses": 101,
+      "expected_oob": 13.668296339103463,
+      "mean_probability": 0.13532966672379668
+    },
+    {
+      "nta2020": "BK1102",
+      "nta_name": "Bath Beach",
+      "businesses": 121,
+      "expected_oob": 13.16494151852676,
+      "mean_probability": 0.10880116957460133
+    },
+    {
+      "nta2020": "BX1004",
+      "nta_name": "Co-op City",
+      "businesses": 98,
+      "expected_oob": 13.163829199448877,
+      "mean_probability": 0.13432478774947834
+    },
+    {
+      "nta2020": "QN0504",
+      "nta_name": "Middle Village",
+      "businesses": 106,
+      "expected_oob": 13.134773303266964,
+      "mean_probability": 0.12391295569119778
+    },
+    {
+      "nta2020": "QN0805",
+      "nta_name": "Jamaica Hills-Briarwood",
+      "businesses": 114,
+      "expected_oob": 12.62646238335735,
+      "mean_probability": 0.11075844195927499
+    },
+    {
+      "nta2020": "BK1702",
+      "nta_name": "East Flatbush-Farragut",
+      "businesses": 83,
+      "expected_oob": 12.5389196469415,
+      "mean_probability": 0.15107132104748794
+    },
+    {
+      "nta2020": "BK1802",
+      "nta_name": "Marine Park-Mill Basin-Bergen Beach",
+      "businesses": 89,
+      "expected_oob": 12.247383301575733,
+      "mean_probability": 0.1376110483323116
+    },
+    {
+      "nta2020": "BX0301",
+      "nta_name": "Morrisania",
+      "businesses": 118,
+      "expected_oob": 11.519658831264989,
+      "mean_probability": 0.0976242273836016
+    },
+    {
+      "nta2020": "BK0103",
+      "nta_name": "South Williamsburg",
+      "businesses": 97,
+      "expected_oob": 11.497725315047992,
+      "mean_probability": 0.11853325067059786
+    },
+    {
+      "nta2020": "QN0705",
+      "nta_name": "East Flushing",
+      "businesses": 78,
+      "expected_oob": 10.991556069239481,
+      "mean_probability": 0.14091738550307026
+    },
+    {
+      "nta2020": "QN0702",
+      "nta_name": "Whitestone-Beechhurst",
+      "businesses": 90,
+      "expected_oob": 10.91566268949989,
+      "mean_probability": 0.12128514099444322
+    },
+    {
+      "nta2020": "QN0901",
+      "nta_name": "Kew Gardens",
+      "businesses": 84,
+      "expected_oob": 10.90961703563435,
+      "mean_probability": 0.1298763932813613
+    },
+    {
+      "nta2020": "QN1103",
+      "nta_name": "Douglaston-Little Neck",
+      "businesses": 78,
+      "expected_oob": 10.628377712055325,
+      "mean_probability": 0.13626125271865802
+    },
+    {
+      "nta2020": "QN0803",
+      "nta_name": "Fresh Meadows-Utopia",
+      "businesses": 70,
+      "expected_oob": 10.403052109623989,
+      "mean_probability": 0.14861503013748556
+    },
+    {
+      "nta2020": "QN1003",
+      "nta_name": "Howard Beach-Lindenwood",
+      "businesses": 76,
+      "expected_oob": 10.201966495769062,
+      "mean_probability": 0.13423640126011924
+    },
+    {
+      "nta2020": "QN0804",
+      "nta_name": "Jamaica Estates-Holliswood",
+      "businesses": 83,
+      "expected_oob": 10.197571578804993,
+      "mean_probability": 0.12286230817837342
+    },
+    {
+      "nta2020": "SI0101",
+      "nta_name": "St. George-New Brighton",
+      "businesses": 91,
+      "expected_oob": 10.155361322931677,
+      "mean_probability": 0.11159737717507337
+    },
+    {
+      "nta2020": "BX0302",
+      "nta_name": "Claremont Village-Claremont (East)",
+      "businesses": 74,
+      "expected_oob": 9.880848386447399,
+      "mean_probability": 0.13352497819523512
+    },
+    {
+      "nta2020": "SI0103",
+      "nta_name": "Rosebank-Shore Acres-Park Hill",
+      "businesses": 79,
+      "expected_oob": 9.516298635444448,
+      "mean_probability": 0.12045947639803099
+    },
+    {
+      "nta2020": "BX0402",
+      "nta_name": "Highbridge",
+      "businesses": 98,
+      "expected_oob": 9.294904580195933,
+      "mean_probability": 0.09484596510404013
+    },
+    {
+      "nta2020": "MN0902",
+      "nta_name": "Manhattanville-West Harlem",
+      "businesses": 83,
+      "expected_oob": 9.289238792069911,
+      "mean_probability": 0.11191853966349291
+    },
+    {
+      "nta2020": "BX0902",
+      "nta_name": "Soundview-Clason Point",
+      "businesses": 65,
+      "expected_oob": 9.283360727902616,
+      "mean_probability": 0.14282093427542486
+    },
+    {
+      "nta2020": "BK0701",
+      "nta_name": "Windsor Terrace-South Slope",
+      "businesses": 72,
+      "expected_oob": 9.270288205236398,
+      "mean_probability": 0.12875400285050553
+    },
+    {
+      "nta2020": "SI0304",
+      "nta_name": "Annadale-Huguenot-Prince's Bay-Woodrow",
+      "businesses": 61,
+      "expected_oob": 9.184178194471775,
+      "mean_probability": 0.1505602982700291
+    },
+    {
+      "nta2020": "QN0703",
+      "nta_name": "Bay Terrace-Clearview",
+      "businesses": 58,
+      "expected_oob": 8.589123413401758,
+      "mean_probability": 0.1480883347138234
+    },
+    {
+      "nta2020": "BX0801",
+      "nta_name": "Kingsbridge Heights-Van Cortlandt Village",
+      "businesses": 65,
+      "expected_oob": 8.581654869510214,
+      "mean_probability": 0.13202545953092637
+    },
+    {
+      "nta2020": "BX0803",
+      "nta_name": "Riverdale-Spuyten Duyvil",
+      "businesses": 90,
+      "expected_oob": 8.438211074010715,
+      "mean_probability": 0.09375790082234127
+    },
+    {
+      "nta2020": "QN1204",
+      "nta_name": "Springfield Gardens (North)-Rochdale Village",
+      "businesses": 68,
+      "expected_oob": 8.330339677932477,
+      "mean_probability": 0.12250499526371289
+    },
+    {
+      "nta2020": "QN1302",
+      "nta_name": "Bellerose",
+      "businesses": 70,
+      "expected_oob": 8.309789388285509,
+      "mean_probability": 0.11871127697550728
+    },
+    {
+      "nta2020": "QN1307",
+      "nta_name": "Rosedale",
+      "businesses": 54,
+      "expected_oob": 8.230801642588618,
+      "mean_probability": 0.15242225264052997
+    },
+    {
+      "nta2020": "QN1403",
+      "nta_name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
+      "businesses": 58,
+      "expected_oob": 7.954436116029148,
+      "mean_probability": 0.13714545027636463
+    },
+    {
+      "nta2020": "QN1104",
+      "nta_name": "Oakland Gardens-Hollis Hills",
+      "businesses": 59,
+      "expected_oob": 7.863350662641925,
+      "mean_probability": 0.13327712987528686
+    },
+    {
+      "nta2020": "QN1304",
+      "nta_name": "Cambria Heights",
+      "businesses": 58,
+      "expected_oob": 7.8232383707543045,
+      "mean_probability": 0.13488342018541905
+    },
+    {
+      "nta2020": "BX0601",
+      "nta_name": "West Farms",
+      "businesses": 79,
+      "expected_oob": 7.789833704734701,
+      "mean_probability": 0.09860548993335064
+    },
+    {
+      "nta2020": "QN1301",
+      "nta_name": "Glen Oaks-Floral Park-New Hyde Park",
+      "businesses": 61,
+      "expected_oob": 7.6946083397768446,
+      "mean_probability": 0.12614112032421057
+    },
+    {
+      "nta2020": "QN1402",
+      "nta_name": "Rockaway Beach-Arverne-Edgemere",
+      "businesses": 49,
+      "expected_oob": 7.269079021124295,
+      "mean_probability": 0.1483485514515162
+    },
+    {
+      "nta2020": "QN0102",
+      "nta_name": "Old Astoria-Hallets Point",
+      "businesses": 54,
+      "expected_oob": 5.868751788950446,
+      "mean_probability": 0.10868058868426751
+    },
+    {
+      "nta2020": "SI0203",
+      "nta_name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+      "businesses": 43,
+      "expected_oob": 5.378013993391144,
+      "mean_probability": 0.12507009286956147
+    },
+    {
+      "nta2020": "QN0706",
+      "nta_name": "Queensboro Hill",
+      "businesses": 45,
+      "expected_oob": 5.2066281699390204,
+      "mean_probability": 0.11570284822086713
+    },
+    {
+      "nta2020": "QN1306",
+      "nta_name": "Springfield Gardens (South)-Brookville",
+      "businesses": 43,
+      "expected_oob": 5.048423836187574,
+      "mean_probability": 0.11740520549273428
+    },
+    {
+      "nta2020": "BK1301",
+      "nta_name": "Gravesend (South)",
+      "businesses": 37,
+      "expected_oob": 4.856211210443126,
+      "mean_probability": 0.131248951633598
+    },
+    {
+      "nta2020": "BK0504",
+      "nta_name": "Spring Creek-Starrett City",
+      "businesses": 28,
+      "expected_oob": 3.409130405491053,
+      "mean_probability": 0.12175465733896618
+    },
+    {
+      "nta2020": "SI0301",
+      "nta_name": "Oakwood-Richmondtown",
+      "businesses": 25,
+      "expected_oob": 2.629956495890971,
+      "mean_probability": 0.10519825983563884
+    },
+    {
+      "nta2020": "QN0161",
+      "nta_name": "Sunnyside Yards (North)",
+      "businesses": 21,
+      "expected_oob": 2.587674535618898,
+      "mean_probability": 0.12322259693423324
+    },
+    {
+      "nta2020": "SI0303",
+      "nta_name": "Arden Heights-Rossville",
+      "businesses": 28,
+      "expected_oob": 2.3229998193988246,
+      "mean_probability": 0.08296427926424374
+    },
+    {
+      "nta2020": "QN8381",
+      "nta_name": "John F. Kennedy International Airport",
+      "businesses": 15,
+      "expected_oob": 2.0923632345203846,
+      "mean_probability": 0.13949088230135898
+    },
+    {
+      "nta2020": "SI0391",
+      "nta_name": "Freshkills Park (South)",
+      "businesses": 12,
+      "expected_oob": 1.6077684148555558,
+      "mean_probability": 0.133980701237963
+    },
+    {
+      "nta2020": "QN8081",
+      "nta_name": "LaGuardia Airport",
+      "businesses": 10,
+      "expected_oob": 1.2771101580471869,
+      "mean_probability": 0.1277110158047187
+    },
+    {
+      "nta2020": "MN0601",
+      "nta_name": "Stuyvesant Town-Peter Cooper Village",
+      "businesses": 13,
+      "expected_oob": 1.2171711938608312,
+      "mean_probability": 0.09362855337391009
+    },
+    {
+      "nta2020": "BX1161",
+      "nta_name": "Hutchinson Metro Center",
+      "businesses": 11,
+      "expected_oob": 1.0310164869472245,
+      "mean_probability": 0.09372877154065677
+    },
+    {
+      "nta2020": "BK0261",
+      "nta_name": "Brooklyn Navy Yard",
+      "businesses": 7,
+      "expected_oob": 0.9211501223442337,
+      "mean_probability": 0.13159287462060482
+    },
+    {
+      "nta2020": "QN0271",
+      "nta_name": "Calvary & Mount Zion Cemeteries",
+      "businesses": 4,
+      "expected_oob": 0.4958063287795833,
+      "mean_probability": 0.12395158219489583
+    },
+    {
+      "nta2020": "BX2691",
+      "nta_name": "Van Cortlandt Park",
+      "businesses": 6,
+      "expected_oob": 0.4585581535691461,
+      "mean_probability": 0.07642635892819101
+    },
+    {
+      "nta2020": "BX0491",
+      "nta_name": "Yankee Stadium-Macombs Dam Park",
+      "businesses": 4,
+      "expected_oob": 0.3609250134911225,
+      "mean_probability": 0.09023125337278062
+    },
+    {
+      "nta2020": "MN1191",
+      "nta_name": "Randall's Island",
+      "businesses": 1,
+      "expected_oob": 0.2273692440184932,
+      "mean_probability": 0.2273692440184932
+    },
+    {
+      "nta2020": "BK5591",
+      "nta_name": "Prospect Park",
+      "businesses": 1,
+      "expected_oob": 0.22591226150395746,
+      "mean_probability": 0.22591226150395746
+    },
+    {
+      "nta2020": "QN8191",
+      "nta_name": "Flushing Meadows-Corona Park",
+      "businesses": 1,
+      "expected_oob": 0.21189161548568805,
+      "mean_probability": 0.21189161548568805
+    },
+    {
+      "nta2020": "BK5691",
+      "nta_name": "Barren Island-Floyd Bennett Field",
+      "businesses": 2,
+      "expected_oob": 0.19698156580421242,
+      "mean_probability": 0.09849078290210621
+    },
+    {
+      "nta2020": "MN1292",
+      "nta_name": "Inwood Hill Park",
+      "businesses": 2,
+      "expected_oob": 0.12289923513838791,
+      "mean_probability": 0.061449617569193954
+    },
+    {
+      "nta2020": "QN0572",
+      "nta_name": "Middle Village Cemetery",
+      "businesses": 1,
+      "expected_oob": 0.09265273722973341,
+      "mean_probability": 0.09265273722973341
+    },
+    {
+      "nta2020": "QN0171",
+      "nta_name": "St. Michael's Cemetery",
+      "businesses": 1,
+      "expected_oob": 0.07932453481538873,
+      "mean_probability": 0.07932453481538873
+    },
+    {
+      "nta2020": "MN6491",
+      "nta_name": "Central Park",
+      "businesses": 1,
+      "expected_oob": 0.07419548950386148,
+      "mean_probability": 0.07419548950386148
+    },
+    {
+      "nta2020": "BK1891",
+      "nta_name": "Marine Park-Plumb Island",
+      "businesses": 1,
+      "expected_oob": 0.060757361853563695,
+      "mean_probability": 0.060757361853563695
+    },
+    {
+      "nta2020": "MN0661",
+      "nta_name": "United Nations",
+      "businesses": 1,
+      "expected_oob": 0.05259838701545972,
+      "mean_probability": 0.05259838701545972
+    }
+  ],
+  "by_last_positive_year": [
+    {
+      "last_positive_year": 2025,
+      "businesses": 14118,
+      "expected_oob": 2075.3513744125034,
+      "mean_probability": 0.14700038067803536
+    },
+    {
+      "last_positive_year": 2024,
+      "businesses": 6389,
+      "expected_oob": 1283.3147614818336,
+      "mean_probability": 0.2008631650464601
+    },
+    {
+      "last_positive_year": 2023,
+      "businesses": 5016,
+      "expected_oob": 1197.9001830527834,
+      "mean_probability": 0.23881582596746082
+    },
+    {
+      "last_positive_year": 2026,
+      "businesses": 17924,
+      "expected_oob": 1165.6695357673234,
+      "mean_probability": 0.06503400668195287
+    }
+  ],
+  "full_history_by_last_positive_year": [
+    {
+      "last_positive_year": 2011,
+      "businesses": 11995,
+      "expected_oob": 6168.193560725804,
+      "mean_probability": 0.5142303927241187
+    },
+    {
+      "last_positive_year": 2013,
+      "businesses": 11163,
+      "expected_oob": 5700.848452192125,
+      "mean_probability": 0.5106914317111999
+    },
+    {
+      "last_positive_year": 2012,
+      "businesses": 10869,
+      "expected_oob": 5576.1918678864085,
+      "mean_probability": 0.5130363297346958
+    },
+    {
+      "last_positive_year": 2010,
+      "businesses": 9641,
+      "expected_oob": 4990.290516167245,
+      "mean_probability": 0.5176112971856908
+    },
+    {
+      "last_positive_year": 2014,
+      "businesses": 8905,
+      "expected_oob": 4553.194242194718,
+      "mean_probability": 0.5113076072088397
+    },
+    {
+      "last_positive_year": 2017,
+      "businesses": 6527,
+      "expected_oob": 3761.627248685938,
+      "mean_probability": 0.5763179483201989
+    },
+    {
+      "last_positive_year": 2018,
+      "businesses": 5244,
+      "expected_oob": 2979.0251928534785,
+      "mean_probability": 0.5680826073328525
+    },
+    {
+      "last_positive_year": 2015,
+      "businesses": 5863,
+      "expected_oob": 2942.3844159762193,
+      "mean_probability": 0.5018564584643048
+    },
+    {
+      "last_positive_year": 2016,
+      "businesses": 5916,
+      "expected_oob": 2898.6512019403845,
+      "mean_probability": 0.48996808687295207
+    },
+    {
+      "last_positive_year": 2019,
+      "businesses": 5332,
+      "expected_oob": 2706.3304416410033,
+      "mean_probability": 0.5075638487698806
+    },
+    {
+      "last_positive_year": 2025,
+      "businesses": 14118,
+      "expected_oob": 2075.3513744125034,
+      "mean_probability": 0.14700038067803536
+    },
+    {
+      "last_positive_year": 2020,
+      "businesses": 3118,
+      "expected_oob": 1322.8323171902184,
+      "mean_probability": 0.42425667645613163
+    },
+    {
+      "last_positive_year": 2024,
+      "businesses": 6389,
+      "expected_oob": 1283.3147614818336,
+      "mean_probability": 0.2008631650464601
+    },
+    {
+      "last_positive_year": 2023,
+      "businesses": 5016,
+      "expected_oob": 1197.9001830527834,
+      "mean_probability": 0.23881582596746082
+    },
+    {
+      "last_positive_year": 2026,
+      "businesses": 17924,
+      "expected_oob": 1165.6695357673234,
+      "mean_probability": 0.06503400668195287
+    },
+    {
+      "last_positive_year": 2021,
+      "businesses": 1918,
+      "expected_oob": 727.5051516249392,
+      "mean_probability": 0.37930404151456687
+    },
+    {
+      "last_positive_year": 2022,
+      "businesses": 2250,
+      "expected_oob": 683.1099019360287,
+      "mean_probability": 0.3036044008604572
+    }
+  ],
+  "timing_seconds": 3.66
+}

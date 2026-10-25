@@ -1,0 +1,33 @@
+# Data sources. All are NYC Department of Consumer and Worker Protection (DCWP) inspections
+# published on NYC Open Data, except the 2015 snapshot from MongoDB's sample data.
+
+socrata_base: https://data.cityofnewyork.us/resource
+page_size: 50000
+
+sources:
+  archive:
+    dataset_id: kwss-yksz        # Archived DCWP Inspections (Accela system), ~1.43M rows, ends 2023-06-30
+    title: Archived DCWP Inspections
+    date_field: insp_dt
+    since_env: ARCHIVE_SINCE     # rows before this date are skipped at download time
+    raw_collection: raw_archive
+    schema_version: 1
+
+  live:
+    dataset_id: jzhd-m6uv        # DCWP Inspections (current system), starts 2023-07-03
+    title: DCWP Inspections
+    date_field: date_of_occurrence
+    raw_collection: raw_live
+    schema_version: 2
+
+  sample_2015:
+    # Not downloaded: restored from sampledata.archive with mongorestore.
+    source_db: sample_training
+    source_collection: inspections
+    raw_collection: raw_sample_2015
+    schema_version: 0
+
+boundaries:
+  nta2020:
+    dataset_id: 9nt8-h7nd        # 2020 Neighborhood Tabulation Areas, used for neighborhood maps
+    url: https://data.cityofnewyork.us/api/v3/views/9nt8-h7nd/query.geojson?accessType=DOWNLOAD

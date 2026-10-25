@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    # Local Atlas image: MongoDB 8 plus Atlas Search and Vector Search, no cloud account.
+    image: mongodb/mongodb-atlas-local:8.0
+    container_name: storefronts-mongo
+    # Host port 27018 so this never collides with a mongod you already run on 27017.
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
+  mongo-config:

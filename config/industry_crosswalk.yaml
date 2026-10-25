@@ -1,0 +1,124 @@
+# Industry harmonization across the two record systems.
+# Raw labels look like "Cigarette Retail Dealer - 127"; the trailing license code is split off
+# first, then the label goes through `renames`, then gets an analysis group.
+#
+# Extended from the first real data-quality report. `storefronts profile` lists every label that falls through to the
+# default group, with counts per source. Extend this file from that list.
+
+renames:
+  # The archive's tobacco label became "Tobacco Retail Dealer" in the current system.
+  Cigarette Retail Dealer: Tobacco Retail Dealer
+  Laundry: Retail Laundry
+  Laundries: Retail Laundry
+  Air Condtioning Law: Air Conditioning Law   # typo in the archive
+  Tobacco Prod'T Sales: Tobacco Product Sales
+  Gov'T Agency Retail: Government Agency Retail
+
+groups:
+  tobacco_vape_cannabis:
+    - Tobacco Retail Dealer
+    - Electronic Cigarette Dealer
+    - Unlicensed Cannabis Retailer
+    - Tobacco Product Sales
+  food_grocery:
+    - Grocery-Retail
+    - Supermarket
+    - Stoop Line Stand
+    - Restaurant
+    - Sidewalk Cafe
+    - Catering Establishment
+  general_retail:
+    - Misc Non-Food Retail
+    - Wearing Apparel
+    - Electronic Store
+    - Jewelry Store-Retail
+    - Hardware-Retail
+    - Furniture Sales
+    - Drug Store Retail
+    - Newsstand
+    - Dealer In Products For The Disabled
+    - Micromobility Device Store
+    - Retail Store
+    - Megastore
+    - Floor Coverings
+    - Appliances
+  secondhand_pawn:
+    - Secondhand Dealer [General]
+    - Secondhand Dealer Auto
+    - Pawnbroker
+    - Secondhand Dealer - Firearm
+  personal_services:
+    - Salons And Barbershop
+    - Retail Laundry
+    - Dry Cleaners
+    - Electronic & Home Appliance Service Dealer
+    - Tax Preparers
+    - Immigration Svc Prv
+    - Employment Agency
+    - Funeral Homes
+    - Laundry Jobber
+    - Industrial Laundry
+    - Locksmith
+    - Travel Agency
+    - Tenant Screening
+    - Debt Collection Agency
+    - Photography Services
+    - Health Spa
+  auto_fuel_parking:
+    - Gas Station-Retail
+    - Fuel Oil Dealer
+    - Garage
+    - Garage & Parking Lot
+    - Parking Lot
+    - Car Wash
+    - Auto Rental
+  lodging:
+    - Hotel
+  entertainment:
+    - Gaming Cafe
+    - Pool Or Billiard Room
+    - Amusement Arcade
+    - Amusement Device (Permanent)
+    - Cabaret
+    - Bingo Game Operator
+    - Commercial Lessor (Bingo/Games Of Chance)
+  wholesale_industrial:
+    - Wholesale Food Market
+    - Storage Warehouse
+    - Mini-Storage Company
+    - Scrap Metal Processor
+    - Scale Dealer/Repairer
+    - Auction House
+  # Rule-based checks (a product or law, not a business type). The business is a real
+  # storefront, but its industry is unknown from this record.
+  product_rule_checks:
+    - Air Conditioning Law
+    - Box Cutter
+    - Imitation Gun
+    - Laser Pointer Sales
+    - Spray Paint Sls Mnor
+    - Special Sale
+    - Gift Certificate
+
+default_group: other
+
+# Licensed vehicles and mobile or individual licenses: excluded from storefront analysis.
+non_storefront:
+  - Pedicab Business
+  - Sightseeing Bus
+  - Horse Drawn Cab Owner
+  - Tow Truck Company
+  - Mobile Food Vendor
+  - Sightseeing Guide
+  - Process Server Individual
+  - Home Improvement Contractor
+  - Home Improvement Salesperson
+  - Tow Truck Driver
+  - Pedicab Driver
+  - General Vendor
+  - Gasoline Truck-Retail
+  - Amusement Device (Portable)
+  - Amusement Device (Temporary)
+  - Temporary Street Fair Vendor Permit
+  - Auctioneer
+  - Mailorder Misc

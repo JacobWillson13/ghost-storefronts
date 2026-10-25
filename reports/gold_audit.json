@@ -1,0 +1,42 @@
+{
+  "invalid_visit_rows": [],
+  "invalid_status_rows": [],
+  "inconsistent_timestamp_blocks": [],
+  "source_eligible": 1182668,
+  "gold_visits": 1182668,
+  "independent_checks": 51,
+  "independent_status_checks": 24,
+  "excluded_storefront_records_without_id": 17936,
+  "passed": true,
+  "source_indexes_unchanged": true,
+  "timings_seconds": {
+    "gold_chain_dates": 2.85,
+    "visit_features": 44.63,
+    "business_status": 11.95
+  },
+  "source_counts_unchanged": {
+    "inspections": 1282043,
+    "raw_archive": 995500,
+    "raw_live": 286543,
+    "raw_sample_2015": 80047,
+    "nta2020": 262,
+    "business_links": 373
+  },
+  "source_inventory": [
+    {
+      "_id": "archive",
+      "n": 995500,
+      "first": "2010-01-01 00:00:00",
+      "last": "2023-06-30 16:10:59"
+    },
+    {
+      "_id": "live",
+      "n": 286543,
+      "first": "2023-07-03 00:00:00",
+      "last": "2026-08-23 00:00:00"
+    }
+  ],
+  "snapshot_date": "2026-08-23",
+  "exclusive_as_of": "2026-08-24T00:00:00",
+  "chain_names": 447
+}

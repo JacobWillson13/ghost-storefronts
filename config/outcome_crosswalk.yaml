@@ -1,0 +1,60 @@
+# Maps raw inspection results (archive "insp_rslt", live "inspection_status",
+# 2015 sample "result") to one outcome vocabulary.
+#
+# Outcome classes:
+#   out_of_business  business gone; the closure event used for survival analysis
+#   padlocked        city-enforced closure (sealing order); tracked separately from closure
+#   no_activity      inspector found no sign of the business operating; ambiguous, not a closure
+#   closed_at_visit  shut at the time of the visit (hours, temporary); not a closure
+#   violation        violation found or penalty issued
+#   warning          warning only
+#   compliant        inspected, nothing found
+#   unable           inspection could not be done
+#   administrative   paperwork or process step with no compliance signal
+#
+# Any raw value not listed here maps to "unmapped" and is listed in reports/data_quality.md.
+
+out_of_business:
+  - Out of Business
+padlocked:
+  - Business Padlocked
+no_activity:
+  - No Evidence of Activity
+closed_at_visit:
+  - Closed
+violation:
+  - Violation Issued
+  - ECB Summons Reissued
+  - Fail
+  - ECB Summons Issued
+  - Posting Order Served
+  - License Confiscated
+  - Confiscated
+  - Condemned
+warning:
+  - Warning
+  - ECB Warning Issued
+  - WAR - Warning
+  - EWAR - ECB Warning Issued
+compliant:
+  - No Violation Issued
+  - Pass
+  - No Warning Issued
+  - No Warnings Issued
+  - Licensed
+unable:
+  - Unable to Locate
+  - Unable to Complete Inspection
+  - Unable to Seize Vehicle
+  - Unidentified Vendor/Business   # inspector could not identify the business
+  - Residential                    # address turned out to be residential
+administrative:
+  - Re-inspection
+  - NOH Withdrawn
+  - Samples Obtained
+  - Completed
+  - SAM - Samples Obtained
+  - No License Required
+  - Obtained Evidence of Activity
+  - Historical Invalid Result
+  - ECB Summons Withdrawn
