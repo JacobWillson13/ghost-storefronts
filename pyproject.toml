@@ -3,6 +3,7 @@ name = "ghost-storefronts"
 version = "0.1.0"
 description = "Inspection history, delayed closure records and closed-business predictions in New York City"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
     "pymongo>=4.8",
