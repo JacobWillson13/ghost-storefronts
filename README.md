@@ -2,7 +2,7 @@
 
 **How stale is New York City's record of which businesses are open?**
 
-![Chain closures timeline](docs/img/chains.png)
+![Share of 2025 inspection visits that found the business already closed, by NYC neighborhood](docs/img/map.png)
 
 **[Interactive data story](https://jacobwillson.com/ghost-storefronts/)** · [Notebooks](notebooks/)
 
@@ -31,18 +31,13 @@ closed on known dates, and predicts which visits will find a business already cl
 - **About 5,722 of the 43,447 businesses seen open since 2023 would be recorded closed if
   visited today** (95% interval 5,443 to 5,986, calibration uncertainty only).
 
-![Neighborhood map](docs/img/map.png)
+![RadioShack stores: last seen open vs first closure record](docs/img/chains.png)
 
 ## How it works
-
-
 
 1. **Ingest.** Paged pulls from NYC Open Data (archive 2010 to 2023, live system 2023 on)
    load into raw MongoDB collections unchanged. MongoDB's 2015 `sample_training.inspections`
    collection is matched back to the archive for lineage.
-
-![MongoDB collections](docs/img/mongodb_collections.png)
-
 2. **Silver.** One schema across both record systems, with outcome and industry crosswalks
    in `config/`.
 3. **Geography and identity.** A `2dsphere` index and `$geoWithin` assign each location to an
@@ -53,12 +48,16 @@ closed on known dates, and predicts which visits will find a business already cl
    tested on a later one. Platt calibration and business-clustered bootstrap intervals.
 6. **Outputs.** Four notebooks, CSV exports and a self-contained HTML data story.
 
-<details>
-<summary>Full MongoDB schema (all collections and fields)</summary>
+### In MongoDB
+
+The `storefronts` database: raw downloads, the normalized `inspections` collection, and the
+gold collections the models read.
+
+![MongoDB collections in Compass](docs/img/mongodb_collections.png)
+
+Every collection and field by layer, with the joins the gold pipeline uses.
 
 ![MongoDB schema](docs/img/mongodb_schema.png)
-
-</details>
 
 ## Notebooks
 
@@ -119,7 +118,7 @@ its data volume, and `make help` lists every target.
 |---|---|
 | `config/` | Data sources and outcome and industry crosswalks |
 | `data/` | Local downloads and geographic boundaries; generated data ignored |
-| `docs/` | Self-contained HTML data story and space for README images |
+| `docs/` | Self-contained HTML data story and README images |
 | `exports/` | CSV column dictionary; generated CSVs ignored |
 | `notebooks/` | Four executed analyses |
 | `reports/` | Chain results, model metrics, estimate, gold audit, data quality and SHAP chart |
