@@ -35,9 +35,14 @@ closed on known dates, and predicts which visits will find a business already cl
 
 ## How it works
 
+
+
 1. **Ingest.** Paged pulls from NYC Open Data (archive 2010 to 2023, live system 2023 on)
    load into raw MongoDB collections unchanged. MongoDB's 2015 `sample_training.inspections`
    collection is matched back to the archive for lineage.
+
+![MongoDB collections](docs/img/mongodb_collections.png)
+
 2. **Silver.** One schema across both record systems, with outcome and industry crosswalks
    in `config/`.
 3. **Geography and identity.** A `2dsphere` index and `$geoWithin` assign each location to an
@@ -47,6 +52,13 @@ closed on known dates, and predicts which visits will find a business already cl
 5. **Models.** Staleness rule, logistic regression and LightGBM, trained on earlier years and
    tested on a later one. Platt calibration and business-clustered bootstrap intervals.
 6. **Outputs.** Four notebooks, CSV exports and a self-contained HTML data story.
+
+<details>
+<summary>Full MongoDB schema (all collections and fields)</summary>
+
+![MongoDB schema](docs/img/mongodb_schema.png)
+
+</details>
 
 ## Notebooks
 
