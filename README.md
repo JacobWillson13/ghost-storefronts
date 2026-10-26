@@ -1,10 +1,15 @@
 # Ghost Storefronts
 
+[![CI](https://github.com/JacobWillson13/ghost-storefronts/actions/workflows/ci.yml/badge.svg)](https://github.com/JacobWillson13/ghost-storefronts/actions/workflows/ci.yml)
+![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)
+![MongoDB 8.0](https://img.shields.io/badge/MongoDB-8.0-47A248?logo=mongodb&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **How stale is New York City's record of which businesses are open?**
 
 ![Share of 2025 inspection visits that found the business already closed, by NYC neighborhood](docs/img/map.png)
 
-**[Interactive data story](https://jacobwillson.com/ghost-storefronts/)** · [Notebooks](notebooks/)
+**[Interactive data story](https://jacobwillson.com/dashboards/ghost-storefronts.html)** · [Notebooks](notebooks/)
 
 New York's Department of Consumer and Worker Protection inspects licensed storefronts. When an
 inspector finds a business gone, the visit is recorded as out of business. The city only learns
